@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos y uso Git</title>
+</head>
+<body>
+    <h1>Comandos más usados:</h1>
+    <ul>
+        <li><b>git init:</b> se usa para iniciar un nuevo repositorio de Git</li>
+        <li><b>git config --global user.name "Nombre":</b> Configura nombre usuario</li>
+        <li><b>git config --global user.email "email":</b> Configura email usuario</li>
+        <li><b>git status: </b>Muestra el estado de actual de los archivos ubicados en el área de staging</li>
+        <li><b>git add nombreArhivo.extension: </b>Agrega al área de staging el o los archivos.</li>
+        <li><b>git commit -m "Descripcion commit": </b>Agrega los cambios a la BD del repositorio de git</li>
+        <li><b>git commit:</b> Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio agregar un comentario para el commit. Para poder editar el comit usar "ESC - i". Para guardar cambios ESC + SHIFT + Z Z</li>
+        <li><b>git log:</b>Muestra el historial detallado con commit e id, de todos los commits en dicho 
+    </ul>
+
+    <h1>Comandos importantes:</h1>
+    <p>Estos comandos se separan ya que tienen funciones muy importantes.</p>
+    <ul>
+        <li><b>git reset idCommit --hard/soft</b> Este comando se encarga de regresar a una versión especificada. Se debe tener cuidado con este comando, ya que borrará absolutamente todos los cambios realizados despues de dicho commit. existen dos variastes para el mismo. <b>--hard</b> hará que regrese por completo todo a la versión elegida, perdiendo incluso, los cambios en staging. <b>--soft</b> cumple el mismo rol, pero mantiene los cambios en staging para su posterior commit. </li>
+        <li><b>git reset HEAD (Me encanta XD): </b>Regresa todos los cambios en staging como unstaged. Es decir, revierte el git add.</li>
+        <li><b>git checkout idCommit archivo.extension:</b> Obtiene la versión especificada de dicho archivo. PERO, no elimina sus versiones posteriores. La versión obtenida se tomará como untracked y podrá ser agregada al staging para realizar commit y crear una nueva versión.</li>
+        <li><b>git rm --cached:</b> Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.</li>
+        <ul><li><p>Para mayor información hasta acá leer: <a href="https://platzi.com/clases/1557-git-github/23295-git-reset-vs-git-rm/">Este post de Platzi (necesitas tener suscripción).</a></p></li></ul>
+    </ul>
+</body>
+</html>
