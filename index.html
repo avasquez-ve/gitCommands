@@ -15,9 +15,9 @@
         <li><b>git status: </b>Muestra el estado de actual de los archivos ubicados en el área de staging</li>
         <li><b>git add nombreArhivo.extension: </b>Agrega al área de staging el o los archivos.</li>
         <li><b>git commit -m "Descripcion commit": </b>Agrega los cambios a la BD del repositorio de git</li>
-        <li><b>git commit:</b> Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio agregar un comentario para el commit. Para poder editar el comit usar "ESC - i". Para guardar cambios ESC + SHIFT + Z Z</li>
-        <li><b>git log:</b>Muestra el historial detallado con commit e id, de todos los commits en dicho 
-        <li><b>git diff</b>Permite ver las diferencias entre el staging y nuestro archivo en local. tiene las variaciones <b>git diff id1 id2</b> donde se comparan dos versiones según los id del commit seleccionado. y <b>git diff --stat</b> donde ves las diferencias más resumidas.</li>
+        <li><b>git commit:</b> Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio agregar un comentario para el commit. Para poder editar el comit usar "ESC  i". Para guardar cambios ESC + SHIFT + Z Z</li>
+        <li><b>git log: </b>Muestra el historial detallado con commit e id, de todos los commits en dicho repositorio</li>
+        <li><b>git diff: </b>Permite ver las diferencias entre el staging y nuestro archivo en local. tiene las variaciones <b>git diff id1 id2</b> donde se comparan dos versiones según los id del commit seleccionado. y <b>git diff --stat</b> donde ves las diferencias más resumidas.</li>
     </ul>
 
     <h1>Comandos importantes:</h1>
@@ -27,7 +27,9 @@
         <li><b>git reset HEAD (Me encanta XD): </b>Regresa todos los cambios en staging como unstaged. Es decir, revierte el git add.</li>
         <li><b>git checkout idCommit archivo.extension:</b> Obtiene la versión especificada de dicho archivo. PERO, no elimina sus versiones posteriores. La versión obtenida se tomará como untracked y podrá ser agregada al staging para realizar commit y crear una nueva versión.</li>
         <li><b>git rm --cached:</b> Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.</li>
+        <li><b>git rm --force:</b> Elimina los archivos del área de Staging y de nuestro disco duro.</li>
         <ul><li><p>Para mayor información hasta acá leer: <a href="https://platzi.com/clases/1557-git-github/23295-git-reset-vs-git-rm/">Este post de Platzi (necesitas tener suscripción).</a></p></li></ul>
     </ul>
+    <br>
 </body>
 </html>
