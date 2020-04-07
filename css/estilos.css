@@ -1,3 +1,13 @@
 body{
     font-family: Arial;
 }
+.center {
+    margin: 0 auto;
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 9999;
+}

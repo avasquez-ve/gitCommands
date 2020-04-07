@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <h6 class="fixed" id="changeWeb">Cambiar a versión nocturna</h6>
     <h1>Comandos más usados:</h1>
     <ul>
         <li><b>git init:</b> se usa para iniciar un nuevo repositorio de Git</li>
@@ -33,5 +34,51 @@
         <ul><li><p>Para mayor información hasta acá leer: <a href="https://platzi.com/clases/1557-git-github/23295-git-reset-vs-git-rm/">Este post de Platzi (necesitas tener suscripción).</a></p></li></ul>
     </ul>
     <br>
+
+    <h1>Comandos en ramas</h1>
+    <p>Estos son los comandos aplicados para manejarse entre ramas, crear nuevas ramas, etc.</p>
+    <ul>
+        <li><b>git branch nameBranch:</b> Se utiliza para crear una nueva rama.</li>
+        <li><b>git checkout nameBranch</b> Se utiliza para dirigirse hacia la rama elegida.</li>
+        <li><b>git merge nombreRama: </b> Este comando es <b>súper importante</b>, se utiliza cuando quieres unir los cambios entre 2 ramas. <br> Cuando tienes los cambios de una nueva que creaste y ya les hiciste commit, puedes hacer un merge para fusionarlos con tu rama de master. El proceso puede ser MASTER -> RAMA_NUEVA o RAMA_NUEVA -> MASTER. Cuando quieres dejar todo en master para tener todo en la rama principal, debe usar la segunda opción.</li><br>
+        <ul>
+            <li><b>Conflictos: </b>En GIT, los conflictos aparecen cuando existen diferencias en las mismas líneas de código de los archivos. Ya sea que un compañero modifico la misma línea de un archivo CSS que tú y tienen diferentes cosas. 
+            <br> Los conflictos son fáciles de solucionar y no debe generarte caos ni confusión. La consola de GIT te indicará el estatus del merge que intentaste realizar. <br> <b>Auto-merging archivo.extension</b> indicará un merge correcto y <b>CONFLICT (Content) archivo.extension</b> indicará un conflicto.
+            <br><br>
+            <img src="img/screenshot_error_merge.png" alt="error de consola al realizar merge" />
+            <br><br>
+            Al revisar nuestro archivo en conflicto, encontraremos algo muy peculiar en el, GIT nos muestra exactamente cual fue la línea en conflictos y cuales son las diferencias entre nuestra rama actual y la que queremos obtener. Así se debe ver al usar el bloc de notas:
+            <br><br>
+            <img src="img/screenshot_error_merge_blocNotas.png" alt="diferencias de código bloc de notas" />
+            <br><br>
+            Debemos elegir entre el código que deseamos dejar en el repositorio y para esto, debemos comunicarnos con la persona que escribió el código (si es que estamos trabajando colaborativamente con alguien más) para decidir que código debe irse a la versión del merge. Posterior a este paso, se deben comentar la línea de <b>"<<<<"</b>, las de <b>"===="</b>  y las de <b>">>>>"</b>  junto con el código que no irá al repositorio.
+            <br>
+            Se deben guardar los cambios en el archivo y realizar un nuevo <b>git add .</b> además de un <b>git commit -m "Comentario relacionado con la solución del conflicto en el merge"</b>
+            <br>
+            <b>Adicional:</b> Si usar VSCode, podrás ver que el te da una sugerencia de que hacer con los cambios:
+            <br><br>
+            <img src="img/screenshot_error_merge_code.png" alt="diferencias de código VSCode" />
+            <br><br>
+            Si eliges <b>Accept Current Change</b> estarás dejando los cambios de la rama actual, en cambio, si elgies <b>Accept Incoming Change</b> estarás obteniendo los cambios de la rama desde la cual estás obteniendo los cambios.
+            </li>
+        </ul>
+
+    </ul>
+    <script>
+        var btnVision = document.getElementById("changeWeb");
+        btnVision.addEventListener("click", function (e) {
+            var txtBtnVision = btnVision.innerText;
+
+            if (txtBtnVision == "Cambiar a versión nocturna") {
+                document.body.style.backgroundColor = '#282A35';
+                document.body.style.color = '#FFFFFF';
+                btnVision.innerText = "Cambiar a versión normal";
+            } else {
+                document.body.style.backgroundColor = '#FFFFFF';
+                document.body.style.color = '#000000';
+                btnVision.innerText = "Cambiar a versión nocturna";
+            }
+        });
+    </script>
 </body>
 </html>
