@@ -62,13 +62,46 @@
             Si eliges <b>Accept Current Change</b> estarás dejando los cambios de la rama actual, en cambio, si elgies <b>Accept Incoming Change</b> estarás obteniendo los cambios de la rama desde la cual estás obteniendo los cambios.
             </li>
         </ul>
-
     </ul>
+    <br>
+
+    <h1>Repositorios remotos - GitHub</h1>
+    <p>Conoceremos como poder conectar nuestro repositorio local con algún repositorio remoto, subir nuestros cambios a dicho repositorio, obtener los cambios desde el repositorio y mucho más.</p>
+    <p>Para este caso de prueba utilizaremos el repositorio remoto más conocido del mundo, <a href="https://github.com/">GitHub</a>.</p>
+    <ol>
+        <li>Primero, debemos crearnos una cuenta en GitHub y crear un nuevo repositorio. Preferiblemente, debemos crear el archivo README ya que a través de el podremos indicarle a otros desarrolladores de que va nuestro código.</li><br>
+        <li>Luego de crear el repositorio, Github nos dará la url del mismo, esta la utilizaremos para agregar este origen remoto desde nuestro repositorio local. Se debe copiar la ruta HTTPS que github nos dió: <br><br> <img src="img/url_repo_github.png" alt="url de nuestro repositorio remoto"><br><br></li>
+        <li>Usar el comando <b>git remote add origin urlRepositorioRemoto</b> con esto, estaremos agregando la referencia del repositorio remoto a nuestro repositorio en local. Posterior a esto, la consola de git no arrojará ningún mensaje, pero si usamos el comando <b>git remove -v</b> podremos visualizar el repositorio remoto al que hacemos referencia actualmente. 
+        <br><br>
+        <img src="img/git_remote_v.png" alt="git remote -v para ver la referencia del repositorio remoto">
+        <br><br>
+        Te dejo la url de este mismo repositorio para que puedas probar: <b>https://github.com/avasquez-ve/gitCommands.git</b></li><br>
+        <li>Como ya tenemos la referencia del repositorio remoto, ahora debemos obtener la historia que se encuentre en dicho repositorio, esta acción se debe realizar siempre antes de enviar los cambios desde el repositorio local. <br><br> Si el repositorio remoto es diferente a nuestro repositorio local, es probable que Git nos de un warning con el mensaje <b>"refusing to merge unrelated histories"</b> esto quiere decir que no puede hacer la fusión debido a que las historias de los dos repositorios son diferentes. Para forzar esta acción y poder obtener la historia del repositorio remoto debemos usar el comando <b>git pull origin master --allow-unrelated-histories</b> para permitir unir ambas historias.</li>
+        <br><br>
+        <img src="img/git_pull_origin_master.png" alt="git pull origin master, mensajes de advertencia">
+        <br><br>
+
+        <li>Con el comando <b>ls -al</b> podremos ver el archivo <b>README</b> creado desde GitHub. Y al ejecutar <b>git log</b> también veremos el commit hecho en GitHub para dicho archivo. 
+        <br><br>
+        <img src="img/ls-al.png" alt="comando ls -al. Usado para visualizar en forma de lista los archivos visibles y ocultos de un directorio">
+        <br><br>
+        </li>
+        <li>Ahora, para subir los cambios locales al repositorio, debemos usar el comando <b>git push origin master</b>, con esto, ya nuestros cambios locales estarán dentro del repositorio remoto. Recordar siempre que este comando lo debemos ejecutar desde la <b>rama master</b> para no generar conflictos.</li>
+        <br><br>
+        <img src="img/git_push_origin_master.png" alt="comando git push origin master. Usado para subir los cambios hacia un repositorio remoto">
+        <br><br>
+        <p>Así quedó nuestro repositorio remoto en GitHub luego de agregar los cambios desde el repositorio local</p>
+        <br>
+        <img src="img/proyectoGitHub.png" alt="repositorio en GitHub">
+        <br>
+    </ol>
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function (e) {
             var date = new Date();
             var hours = date.getHours();
-            if (hours >= 20) {
+            if (hours >= 20 || hours <= 7) {
                 setTimeout(function() {
                     if (confirm("Al parecer ya se hizo de noche, ¿deseas activar el modo nocturno?")) {
                         document.body.style.backgroundColor = '#282A35';
