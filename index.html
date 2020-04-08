@@ -54,8 +54,8 @@
             Debemos elegir entre el código que deseamos dejar en el repositorio y para esto, debemos comunicarnos con la persona que escribió el código (si es que estamos trabajando colaborativamente con alguien más) para decidir que código debe irse a la versión del merge. Posterior a este paso, se deben comentar la línea de <b>"<<<<"</b>, las de <b>"===="</b>  y las de <b>">>>>"</b>  junto con el código que no irá al repositorio.
             <br>
             Se deben guardar los cambios en el archivo y realizar un nuevo <b>git add .</b> además de un <b>git commit -m "Comentario relacionado con la solución del conflicto en el merge"</b>
-            <br>
-            <b>Adicional:</b> Si usar VSCode, podrás ver que el te da una sugerencia de que hacer con los cambios:
+            <br><br>
+            <b>Adicional:</b> Si usas VSCode, podrás ver que el te da una sugerencia de que hacer con los cambios:
             <br><br>
             <img src="img/screenshot_error_merge_code.png" alt="diferencias de código VSCode" />
             <br><br>
@@ -65,6 +65,20 @@
 
     </ul>
     <script>
+        document.addEventListener("DOMContentLoaded", function (e) {
+            var date = new Date();
+            var hours = date.getHours();
+            if (hours >= 20) {
+                setTimeout(function() {
+                    if (confirm("Al parecer ya se hizo de noche, ¿deseas activar el modo nocturno?")) {
+                        document.body.style.backgroundColor = '#282A35';
+                        document.body.style.color = '#FFFFFF';
+                        btnVision.innerText = "Cambiar a versión normal";
+                    }
+                },4000);
+            }
+        });
+
         var btnVision = document.getElementById("changeWeb");
         btnVision.addEventListener("click", function (e) {
             var txtBtnVision = btnVision.innerText;
