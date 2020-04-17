@@ -96,8 +96,27 @@
         <br>
     </ol>
 
-    <h1>Configurar tus llaves SSH en logal</h1>
+    <h1>Configurar tus llaves SSH en local</h1>
     <p>Aprenderemos como usar las llaves SSH para conectarnos a GitHub usando SSH y dejar a un lado HTTPS</p>
+    <p>Para hacer nuestra conexión aún más segura, podemos usar llaves encriptadas, con las cuales enviamos nuestros datos cifrados. Dichos datos solo podrán ser decifrados con una llave pública que compartiremos con GitHub.</p>
+    <ol>
+        <li><b>Primer paso:</b> Generar las llaves SSH con el comando <br> <b>ssh-keygen -t rsa -b 4096 -C "tu@email.com"</b> <br> debemos usar el mismo email que usamos para Github. Tomar en cuenta que luego de apretar enter, nos va a sugerir agregarle una contraseña a dicha llave para hacerla aún más segura. Este paso es opcional, si no queremos agregarle una contraseña solo aprietas ENTER.</li><br>
+        <li><b>Las llaves se guardaran</b> en una carpeta oculta llamada .ssh donde tendremos la llave pública <b>id_rsa.pub</b> y la privada <b>id_rsa</b> NOTA: La llave privada <b>jamás</b> se debe compartir con nadie ni con ningún otro dispositivo.</li><br>
+        <li><b>Segundo paso:</b> para terminar de configurar las claves, debemos comprobar que el servidor se encuentre activo, para esto usar el comando <br> <b>eval $(ssh-agent -s)</b> <br> lo cual nos debería retornar un mensaje <b>Agent pid numeroAleatorio</b></li><br>
+        <li><b>Tercer y último paso:</b> ahora, solo debemos agregar al servidor nuestra llave privada, para esto, usar el comando <br> <b>ssh-add ruta-donde-guardaste-tu-llave-privada</b> <br> Y listo, ya tendremos configurada nuestra llave privada para poder conectarnos a través de SSH con GitHub</li><br>
+    </ol>
+
+    <h1>Conectarnos a Github a través de SSH</h1>
+    <p>Luego de haber creado y configurado nuestra llave privada. Debemos configurar nuestra llave pública (la única que podemos compartir) con Github. Es importante tener en cuenta que debemos realizar los pasos anteriores, de lo contrario, no podremos continuar con este paso.</p>
+    <ol>
+        <li><B>Como primer paso:</B> debemos agregar nuestra llave pública a nuestra cuenta de Github. Para eso debemos copiar el contenido de nuestra llave publica, ubicada en el archivo <b>id_rsa.pub</b></li><br>
+        <li><b>El segundo paso es:</b> Ingresar en nuestra cuenta de Github y dirigirnos a la configuración y posteriormente a la gestion de KEYS SSH <br> url: <a href="https://github.com/settings/keys">https://github.com/settings/keys</a><br> Debemos hacer click en  <b>New SSH Key</b> <br> <img src="img/crear_nueva_key_ssh.png" alt="boton crear nueva key ssh"><br> y luego agregar como título, el pc que tendrá asignado dicha key publica, esto es para poder identificarlo, ya que podemos tener varios equipos conectados por SSH a nuestros repositorios. Al finalizar, hacer click en <b>Add SSH KEY</b><br><img src="img/agregando_key.png" alt="agregando key ssh"><br> </li><br>
+        <li>Ahora podremos ver que nuestra key SSH se agregó correctamente <br><img src="img/identificador_ssh_key.png" alt="ver key agregada"><br></li><br>
+
+        <li><b>Como siguiente paso</b>, debemos configurar nuestro repositorio local para dejar de usar HTTPS y empezar a usar SSH con nuestras nuevas keys. Para esto, debemos ir a nuestro repositorio y ejecutar el comando <br> <b>git remote set-url origin url-ssh-del-repositorio-en-github</b> <br> Con esto estaremos cambiando la url del repositorio en github. Podemos comprobar la nueva url usando <b>git remove -v</b></li><b></b>
+        <li>Ahora puedes hacer un <b>git pull origin master</b> confirmar los mensajes, realizar cambios en tu repositorio local y hacer un <b>git push origin master</b></li>
+    </ol>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function (e) {
