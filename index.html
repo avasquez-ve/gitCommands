@@ -68,6 +68,7 @@
             <br><br>
             Si eliges <b>Accept Current Change</b> estarás dejando los cambios de la rama actual, en cambio, si elgies <b>Accept Incoming Change</b> estarás obteniendo los cambios de la rama desde la cual estás obteniendo los cambios.
             </li>
+            <li><b>Publicar ramas en repositorio remotos:</b> Si deseas que tu rama pueda ser usada/visualizada  por otros desarrolladores en un repositorio remoto, debes usar el comando <b>git push origin nombreRama</b></li>
         </ul>
     </ul>
     <br>
@@ -133,8 +134,14 @@
         <li><b>Eliminar tags:</b> Los tags son publicados en Github como releases, versiones estables de nuestro código que deberían funcionar sin problemas. Si llegas a publicar un tag por equivocación, puedes borrarlo con los siguientes dos comandos: <br><br> <b>git tag -d nombreDelTag</b> con esto estaremos borrando el tag en el repositorio local. Para eliminarlo del repositorio remoto se debe usar <b>git push origin :refs/tags/nombreDelTag</b></li>
     </ul>
 
-
-
+    <h1>Magia para desarolladores</h1>
+    <p>Si has llegado hasta aquí y ya manejas de memoria los principales comandos de git, los comandos para las ramas,sabes hacer un merge sin caer en la locura y trabajar con repositorios remotos.</p>
+    <p>Te dejo un buen comando de git que te ayudará a ver fácilmente tu historial de commits.</p>
+    <p><b>¡OJO!</b> has click en el siguiente enlace solo si REALMENTE manejas y comprendes los comandos anteriores y el flujo de Git, de lo contrario, <b>REGRESA OTRO DÍA</b> 👺</p>
+    <p id="showCommand"><b>Visualizar el comando</b></p>
+    <ul id="contH">
+    </ul>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function (e) {
             var date = new Date();
@@ -164,6 +171,78 @@
                 btnVision.innerText = "Cambiar a versión nocturna";
             }
         });
+
+        var txtShowCommand = document.getElementById("showCommand");
+        var ulHidden = document.getElementById("contH");
+        var dataSinBd = [
+            {
+                "hiddenContent" : [
+                    {
+                        "comandosMagicos": [
+                            {//Si llegaste hasta aquí y no cumples con los requisitos mencionados en la web, VETE DE AQUÍ XD.
+                                "descripcion" : "<span>Ver un git log en interfaz sin descargar un programa extra</b>: Git permite ver de forma gráfica en una interfaz los commits que has hecho, el historial de ramas e incluso los tags. Usa el comando <b>gitk</b> y verás algo parecido a esto.</span>",
+                                "img" : [
+                                    {"src":"img/revisemos-faz.png", "alt": "revisa el comando gitk"}
+                                ]
+                            }//Si llegaste hasta aquí y no cumples con los requisitos mencionados en la web, VETE DE AQUÍ XD.
+                        ]
+                    }
+                ]
+            }
+        ]
+
+        txtShowCommand.addEventListener("click", function (e) {
+            if (confirm("Es en serio, solo continúa si estas preparado")) {
+                if (ulHidden.children.length > 0) {
+                    return false;
+                }
+                else
+                {
+                    var newLi = document.createElement("li");
+                    var newImg = document.createElement("img");
+                    var htmlBr = document.createElement("br");
+                    var descripcion = dataSinBd[0].hiddenContent[0].comandosMagicos[0].descripcion;
+                    var srcImg = dataSinBd[0].hiddenContent[0].comandosMagicos[0].img[0].src;
+                    var altImg = dataSinBd[0].hiddenContent[0].comandosMagicos[0].img[0].alt;
+    
+                    //asignaciones
+                    ulHidden.append(newLi);
+                    if (methodValidator(newLi.insertAdjacentHTML)) 
+                    {
+                        newLi.insertAdjacentHTML("afterbegin", descripcion);
+                    }
+                    else 
+                    {
+                        insertElementInNode(newLi, descripcion);
+                    }
+                    setAttributes(newImg, {"src": srcImg, "alt": altImg, "width": "1000"});
+                    newLi.appendChild(htmlBr);
+                    newLi.appendChild(newImg);
+                }
+            }
+        });
+
+        /*funciones*/
+        function methodValidator (element) 
+        {
+            var response = false;
+            if (element) {
+                response = true;
+            }
+            return response;
+        }
+        function insertElementInNode (element, stringContent)
+        {
+            var range = document.createRange();
+            var frag = range.createContextualFragment(stringContent);
+            element.appendChild(frag, element);
+        }
+        function setAttributes (element, attrs)
+        {
+            for (var key in attrs) {
+                element.setAttribute(key, attrs[key]);
+            }
+        }
     </script>
 </body>
 </html>

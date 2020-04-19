@@ -11,3 +11,6 @@ body{
     cursor: pointer;
     z-index: 9999;
 }
+#showCommand {
+    cursor: pointer;
+}
