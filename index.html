@@ -19,8 +19,15 @@
         <li><b>git commit -am "Descripción commit": </b>Nos ahorra el tener que utilizar <b>git commit .</b>, este comando solo es válido para archivos que ya existen en el repositorio, no afectará a archivos nuevos que no hayan sido agregados con add</li>
         <li><b>git commit:</b> Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio agregar un comentario para el commit. Para poder editar el comit usar "ESC  i". Para guardar cambios ESC + SHIFT + Z Z</li>
         <li><b>git log: </b>Muestra el historial detallado con commit e id, de todos los commits en dicho repositorio</li>
+        <li><b>Git log repotenciado:</b> Para tener una visualización más gráfica de tu historial en un repositorio, puedes usar el comando <b>git log --all -decorate- oneline</b> con esto, podrás ver el historial de cambios y ramas de forma más gráfica. <br><img src="img/git_log_all_graph_decorate.png" alt="ver log de commits y ramas historicas en un repositorio"><br></li>
         <li><b>git diff: </b>Permite ver las diferencias entre el staging y nuestro archivo en local. tiene las variaciones <b>git diff id1 id2</b> donde se comparan dos versiones según los id del commit seleccionado. y <b>git diff --stat</b> donde ves las diferencias más resumidas.</li>
         <li><b>git show: </b>Se utiliza para ver el commit y la rama en el que te encuentras actualmente.</li>
+    </ul>
+
+    <h1>Comando de consola útiles</h1>
+    <p>Esta sección es un extra, no tiene que ver directamente con Git, pero puede apoyar de una u otra manera tu repositorios.</p>
+    <ul>
+        <li><b>Crear un alias:</b> para resumir comandos que sean muy extensos, se puede utilizar el comando <b>alias nombreNuevoComando="Comando a convertir"</b> de esta manera, podemos usar una palabra más fácil de recordar para nosotros. <br><b>Ejemplo:</b> alias arbolito="git log --all --graph --decorate --oneline"</li>
     </ul>
 
     <h1>Comandos importantes:</h1>
@@ -116,6 +123,16 @@
         <li><b>Como siguiente paso</b>, debemos configurar nuestro repositorio local para dejar de usar HTTPS y empezar a usar SSH con nuestras nuevas keys. Para esto, debemos ir a nuestro repositorio y ejecutar el comando <br> <b>git remote set-url origin url-ssh-del-repositorio-en-github</b> <br> Con esto estaremos cambiando la url del repositorio en github. Podemos comprobar la nueva url usando <b>git remove -v</b></li><b></b>
         <li>Ahora puedes hacer un <b>git pull origin master</b> confirmar los mensajes, realizar cambios en tu repositorio local y hacer un <b>git push origin master</b></li>
     </ol>
+
+    <h1>Tags y versiones en Git y GitHub</h1>
+    <p>Los tags nos permiten asignar versiones a los commits con cambios más importantes o significativos en nuestro proyecto. A continuación, se presentan los comandos para trabajar con las etiquetas:</p>
+    <ul>
+        <li><b>Crear un tag: </b> antes de crear un tag se debe elegir el commit el cual queremos identificar, para esto, podemos hacer un: <br><br><b>git log --all --graph --decorate --oneline</b> o un <b>git log --all --oneline</b> y copiar el id del commit. <br><br> Se usan los comandos anteriores para poder obtener el id más corto. <br> Luego, ejecutamos el comando para crear el tag <b>git tag -a nombreDelTag -m "Comentario asociado al tag" idDelCommit</b></li><br>
+        <li><b>Visualizar tags creados:</b> Para visualizar los tags que tenemos creados podemos usar los comandos <b>git tag</b> o <b>git show-ref --tags</b> con el primero, solo veremos el nombre del tag y con el segundo, podremos ver el commit generado al crear el tag y la ubicacion.</li><br>
+        <li><b>Enviar tags a un repositorio remoto: </b>Para publicar nuestros tags se debe usar el comando <b>git push origin --tags</b> si te das cuenta, se hace diferente a publicar un commit común.</li>
+        <li><b>Eliminar tags:</b> Los tags son publicados en Github como releases, versiones estables de nuestro código que deberían funcionar sin problemas. Si llegas a publicar un tag por equivocación, puedes borrarlo con los siguientes dos comandos: <br><br> <b>git tag -d nombreDelTag</b> con esto estaremos borrando el tag en el repositorio local. Para eliminarlo del repositorio remoto se debe usar <b>git push origin :refs/tags/nombreDelTag</b></li>
+    </ul>
+
 
 
     <script>
