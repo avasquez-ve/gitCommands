@@ -136,6 +136,11 @@
         <li><b>Eliminar tags:</b> Los tags son publicados en Github como releases, versiones estables de nuestro código que deberían funcionar sin problemas. Si llegas a publicar un tag por equivocación, puedes borrarlo con los siguientes dos comandos: <br><br> <b>git tag -d nombreDelTag</b> con esto estaremos borrando el tag en el repositorio local. Para eliminarlo del repositorio remoto se debe usar <b>git push origin :refs/tags/nombreDelTag</b></li>
     </ul>
 
+    <h1>Usando Rebase</h1>
+    <p>Rebase se utiliza para unir los cambios que tengamos en una rama con nuestra rama master y no dejar rastros de la existencia de dicha rama creada.</p>
+    <p>El rebase es ùtil, por ejemplo, si estamos realizando arreglos de un bug y no se desean mostrar estos cambios como tomados de una rama, si no como parte del flujo normal de la aplicación.</p>
+    <p>Rebase se encarga de ajustar los cambios al momento en que se realizaron y hacer un merge desde el primer commit, no desde el último (como funciona normalmente un flujo en git)</p>
+
     <h1>Magia para desarolladores</h1>
     <p>Si has llegado hasta aquí y ya manejas de memoria los principales comandos de git, los comandos para las ramas,sabes hacer un merge sin caer en la locura y trabajar con repositorios remotos.</p>
     <p>Te dejo un buen comando de git que te ayudará a ver fácilmente tu historial de commits.</p>
