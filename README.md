@@ -6,6 +6,8 @@ Se explica como trabajar con github y dar a conocer el flujo de trabajo para un 
 # Ventajas de gitCommands
 El usar y practicar con git constantemente te ayudará comprender al 100% el flujo de trabajo de git y a conocer los comandos necesarios para trabajar con el.
 
+Aunque a veces, por no estar trabajando en proyectos que usen git, o simplemente no tener la necesidad de usarlo **(cosa que está mal, siempre  deberías tener un repositorio para tu código)** puedes consultar este repositorio y recordar dichos comandos y cuál era su función.
+
 # ¿Cómo contribuir?
 Al ser un repositorio público, puedes obtener este proyecto, realizarle cambios y dejar un pull request para implementar las mejoras que desees.
 
