@@ -14,7 +14,7 @@ Recuerda que:
 # ¿Cómo contribuir?
 Al ser un repositorio público, puedes obtener este proyecto, realizarle cambios y dejar un pull request para implementar las mejoras que desees.
 
-Para contribuir debes:
+Para contribuir debes, saltar la cuerda:
 1. Hacer un Fork de este proyecto para obtenerlo en tu cuenta de GitHub.  https://github.com/avasquez-ve/gitCommands.git
 1. Hacer referencia desde tu equipo al repositorio ubicado en tu cuenta de GitHub: https://github.com/[tu_usuario]/gitCommands.git donde [tu_usuario] hace referencia a tu nombre de usuario en GitHub.
 1. Realizar un git `pull origin master` para obtener la última versión de tu repositorio
