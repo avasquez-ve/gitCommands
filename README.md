@@ -8,6 +8,9 @@ El usar y practicar con git constantemente te ayudará comprender al 100% el flu
 
 Aunque a veces, por no estar trabajando en proyectos que usen git, o simplemente no tener la necesidad de usarlo **(cosa que está mal, siempre  deberías tener un repositorio para tu código)** puedes consultar este repositorio y recordar dichos comandos y cuál era su función.
 
+Recuerda que:
+> "La práctica hace al maestro, pero en el proceso, podemos usar gitCommands y aprender más rápido" 😜
+
 # ¿Cómo contribuir?
 Al ser un repositorio público, puedes obtener este proyecto, realizarle cambios y dejar un pull request para implementar las mejoras que desees.
 
