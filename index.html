@@ -138,12 +138,13 @@
 
     <h1>Usando Rebase</h1>
     <p>Rebase se utiliza para unir los cambios que tengamos en una rama con nuestra rama master y no dejar rastros de la existencia de dicha rama creada.</p>
-    <p>El rebase es ùtil, por ejemplo, si estamos realizando arreglos de un bug y no se desean mostrar estos cambios como tomados de una rama, si no como parte del flujo normal de la aplicación.</p>
+    <p>El rebase es útil, por ejemplo, si estamos realizando arreglos de un bug y no se desean mostrar estos cambios como tomados de una rama, si no como parte del flujo normal de la aplicación.</p>
     <p>Rebase se encarga de ajustar los cambios al momento en que se realizaron y hacer un merge desde el primer commit, no desde el último (como funciona normalmente un flujo en git)</p>
     <ul>
-        <li>Para hacer un rebase, primero debemos ejecutar el comando <b>git rebase nombreRamaMaster</b> desde nuestra rama de cambios</li>
-        <li>Posteior a esto, se debe realizar el rebase desde master apuntando a nuestra rama de cambios <b>git rebase nombreRamaCambios</b></li>
-        <li>Esto lo que hará es integrar master con nuestra rama de cambios y luego pasarla a master nuevamente con todos los cambios incluidos</li>
+        <li>Para hacer un rebase, primero debemos crear una nueva rama, posicionarnos en dicha rama con <b>git checkout</b> y realizar los cambios.</li>
+        <li>Luego de tener nuestros cambios, debemos ejecutar el comando <b>git rebase master</b> desde nuestra rama de cambios <b>es importante que git rebase se haga desde la rama con los cambios primero</b></li>
+        <li>Con esto, ya tendremos unidas las historias de master con nuestra nueva rama. Posteior a esto se debe realizar checkout a mastery ejecutar el rebase desde master apuntando a nuestra rama de cambios <b>git rebase nombreRamaCambios</b></li>
+        <li>Esto lo que hará es integrar master con nuestra rama de cambios y luego pasarla a master nuevamente con todos los cambios incluidos, como un merge.</li>
         <li><b>Nota: </b>Usar rebase es una mala práctica, ya que no tenemos historia de lo que sucede, no se sabe quien hizo que cambios y en ocasiones, si master avanzó mucho, se pueden generar muchos conflictos.</li>
     </ul>
 
