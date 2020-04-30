@@ -157,7 +157,16 @@
         <li>El listado lo puedes consultar usando <b>git stash list</b></li>
         <li>Para obtener los cambios pendientes, debes usar el comando <b>git stash pop</b> ¡OJO! esto lo debes realizar en la misma rama que estabas creando los cambios, ya que si haces pop en una rama diferente, puedes generar un conflicto.</li>
         <li>Una alternativa para guardar tus cambios pendientes y visualizarlos sin tocar la rama master, es usa el comando <b>git stash branch nombreRama</b> esto creará automáticamente una nueva rama con los cambios que estaban en el stash</li>
-        <li><b>Eliminar un stash</b> si deseas eliminar un stash, puedes usar el comando <b>git stash drop</b> esto eliminará el stash que tengas y dejará la versión original.</li>
+        <li><b>Eliminar un stash</b> si deseas eliminar un stash, puedes usar el comando <b>git stash drop</b> esto eliminará el stash que tengas y dejará la versión original.</li>gi
+    </ul>
+
+    <h1>Git Clean</h1>
+    <p>Este comando es utilizado para eliminar archivos que no forman parte de nuestro directorio de trabajo, archivos como .logs, resultados de una compilación, etc.</p>
+    <ul>
+        <li>Para eliminar dichos archivos podemos probar creando copias de archivos existentes en nuestro repositorio</li>
+        <li>Luego, ejecutar <b>git clean --dry-run</b> esto se usa para verificar que eliminará git clean</li>
+        <li>Al confirmar lo que borrará, ejecutamos <b>git clean -f</b> con esto, ya estaremos borrando dichos archivos</li>
+        <li><b>Nota:</b> Git no eliminará los archivos que se encuentren dentro del .gitignore, tampoco eliminará los archivos que tengan el mismo nombre, asi esten en directorios distintos.</li>
     </ul>
 
     <h1>Magia para desarolladores</h1>
