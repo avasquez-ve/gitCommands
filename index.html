@@ -147,6 +147,18 @@
         <li><b>Nota: </b>Usar rebase es una mala práctica, ya que no tenemos historia de lo que sucede, no se sabe quien hizo que cambios y en ocasiones, si master avanzó mucho, se pueden generar muchos conflictos.</li>
     </ul>
 
+    <h1>Usando Git Stash</h1>
+    <p>Git stash es muy útil cuando tienes cambios que no deseas realizarle commits aún, o para realizar pruebas, experimentos que no requieran o no quieras crear una rama para poder visualizarlos</p>
+    <p>El stash es una forma de almacenar tus cambios pendientes para luego poder obtenerlos y hacerles commit, incluso puedes crear una rama con esos cambios pendientes, hacerle commit en la nueva rama y luego realizar un merge en master.</p>
+    <p>Pasos para usar Stash</p>
+    <ul>
+        <li>Primero, puedes realizar cualquier cambio en un documento y guardar los cambios.</li>
+        <li>Luego, usar el comando <b>git stash</b>, esto guardará tus cambios pendientes en un listado de WIP (Work in Process).</li>
+        <li>El listado lo puedes consultar usando <b>git stash list</b></li>
+        <li>Para obtener los cambios pendientes, debes usar el comando <b>git stash pop</b> ¡OJO! esto lo debes realizar en la misma rama que estabas creando los cambios, ya que si haces pop en una rama diferente, puedes generar un conflicto.</li>
+        <li>Una alternativa para guardar tus cambios pendientes y visualizarlos sin tocar la rama master, es usa el comando <b>git stash branch nombreRama</b> esto creará automáticamente una nueva rama con los cambios que estaban en el stash</li>
+    </ul>
+
     <h1>Magia para desarolladores</h1>
     <p>Si has llegado hasta aquí y ya manejas de memoria los principales comandos de git, los comandos para las ramas,sabes hacer un merge sin caer en la locura y trabajar con repositorios remotos.</p>
     <p>Te dejo un buen comando de git que te ayudará a ver fácilmente tu historial de commits.</p>
