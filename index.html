@@ -170,6 +170,21 @@
         <li><b>Nota:</b> Git no eliminará los archivos que se encuentren dentro del .gitignore, tampoco eliminará los archivos que tengan el mismo nombre, asi esten en directorios distintos.</li>
     </ul>
 
+    <h1>Git cherry pick</h1>
+    <p>Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la rama, para eso utilizamos el comando git cherry-pick IDCommit.</p>
+    <p>cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia.</p>
+    <ul>
+        <li>Para usar cherry pick, debes ejecutar el comando git cherry-pick IDCommit desde la rama donde deseas traer los cambios de dicho commit.</li>
+        <li>Es posible que genere conflictos este comando, así que debes tenerlo en cuenta para poder hacer el cherry pick.</li>
+    </ul>
+
+    <h1>Git ammnd</h1>
+    <p>A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más.</p>
+    <p>Amend remienda nuestro error y los cambios que hicimos nos los permite agregar al commit más reciente.</p>
+    <ul>
+        <li>Para esto, se debe hacer los cambios necesario, <b>hacer un git add</b> y posterior a esto, ejecutar el comando <b>git commit --amend</b></li>
+    </ul>
+
     <h1>Magia para desarolladores</h1>
     <p>Si has llegado hasta aquí y ya manejas de memoria los principales comandos de git, los comandos para las ramas,sabes hacer un merge sin caer en la locura y trabajar con repositorios remotos.</p>
     <p>Te dejo un buen comando de git que te ayudará a ver fácilmente tu historial de commits.</p>
