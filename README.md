@@ -3,6 +3,8 @@ gitCommands es un proyecto creado en el curso de Git y Github de Platzi. En el, 
 
 Se explica como trabajar con github y dar a conocer el flujo de trabajo para un repositorio en Git **(próximamente)**.
 
+# Ventajas de gitCommands
+El usar y practicar con git constantemente te ayudará comprender al 100% el flujo de trabajo de git y a conocer los comandos necesarios para trabajar con el.
 
 # ¿Cómo contribuir?
 Al ser un repositorio público, puedes obtener este proyecto, realizarle cambios y dejar un pull request para implementar las mejoras que desees.
