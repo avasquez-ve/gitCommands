@@ -38,7 +38,8 @@
         <li><b>git checkout idCommit archivo.extension:</b> Obtiene la versión especificada de dicho archivo. PERO, no elimina sus versiones posteriores. La versión obtenida se tomará como untracked y podrá ser agregada al staging para realizar commit y crear una nueva versión.</li>
         <li><b>git rm --cached:</b> Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.</li>
         <li><b>git rm --force:</b> Elimina los archivos del área de Staging y de nuestro disco duro.</li>
-        <ul><li><p>Para mayor información hasta acá leer: <a href="https://platzi.com/clases/1557-git-github/23295-git-reset-vs-git-rm/">Este post de Platzi (necesitas tener suscripción).</a></p></li></ul>
+        <ul>Para visualizar todo el historial de git, aunque lo hayamos eliminado, usamos el comando <b>git reflog</b> con este, podemos ver las referencias de los commit e ir y venir entre las distintas versiones con git RESET</ul>
+        <ul><b>Recordatorio:</b> ¡GIT RESET es una mala práctica! Solo usarlo en casos de extrema emergencia y como última opción.</ul>
     </ul>
     <br>
 
@@ -178,7 +179,7 @@
         <li>Es posible que genere conflictos este comando, así que debes tenerlo en cuenta para poder hacer el cherry pick.</li>
     </ul>
 
-    <h1>Git ammnd</h1>
+    <h1>Git amend</h1>
     <p>A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más.</p>
     <p>Amend remienda nuestro error y los cambios que hicimos nos los permite agregar al commit más reciente.</p>
     <ul>
