@@ -1,15 +1,48 @@
+header {
+    background-color: grey;
+    justify-content: center;
+    font-size: 40px;
+   
+    display: flex;
+    flex: 1;
+    box-shadow: 0px 0px 19px 2px rgba(0,0,0,0.61);
+    margin: 0 10px;
+    
+}
+
+header h1 {
+    margin: 0;
+}
+
 body{
     font-family: Arial;
+    
 }
+
+.wrapper { border: solid 1px;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 19px 2px rgba(0,0,0,0.61);
+
+
+}
+
+
 .center {
     margin: 0 auto;
 }
 .fixed{
     position: fixed;
     top: 0;
-    right: 0;
+    right: 20px;
     cursor: pointer;
     z-index: 9999;
+    /* border: blue 1px solid; */
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.5);
+    
+    
 }
 #showCommand {
     cursor: pointer;
