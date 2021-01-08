@@ -8,9 +8,16 @@ body{
     position: fixed;
     top: 0;
     right: 0;
+    left : 0.1;
     cursor: pointer;
     z-index: 9999;
+    color: wheat;
 }
 #showCommand {
     cursor: pointer;
+}
+#header{
+    background: rgb(77, 105, 99); 
+    color: white;
+    padding: 0.2em;
 }
