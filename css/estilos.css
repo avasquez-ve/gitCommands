@@ -40,9 +40,3 @@ body {
 #showCommand {
     cursor: pointer;
 }
-
-@media only screen (min-width:600px) {
-    header{
-        font-size: 15px;
-    }
-}
