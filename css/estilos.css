@@ -1,16 +1,48 @@
-body{
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333333;
+    border-radius: 5px;
+    color: white;
+    height: 100px;
+    width: 100%;
+    font-size: 70px;
+}
+header span {
+    padding-left: 10px;
+}
+header img {
+
+    width: 100px;
+    vertical-align: middle;
+}
+body {
     font-family: Arial;
 }
 .center {
     margin: 0 auto;
 }
-.fixed{
+.fixed {
     position: fixed;
     top: 0;
     right: 0;
     cursor: pointer;
     z-index: 9999;
+    display: flex;
+    padding: 3px;
+    text-align: center;
+    width: 150px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #6e6e6e;
+    align-items: center;
+    text-align: center;
 }
 #showCommand {
     cursor: pointer;
+}
+
+@media only screen (min-width:600px) {
+    header{
+        font-size: 15px;
+    }
 }
