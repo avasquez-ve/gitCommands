@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 header {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #333333;
@@ -39,4 +42,7 @@ body {
 }
 #showCommand {
     cursor: pointer;
+}
+.image-list {
+    list-style: none;
 }
