@@ -196,7 +196,7 @@
     <h1>Magia para desarolladores</h1>
     <p>Si has llegado hasta aquí y ya manejas de memoria los principales comandos de git, los comandos para las ramas,sabes hacer un merge sin caer en la locura y trabajar con repositorios remotos.</p>
     <p>Te dejo un buen comando de git que te ayudará a ver fácilmente tu historial de commits.</p>
-    <p><b>¡OJO!</b> has click en el siguiente enlace solo si REALMENTE manejas y comprendes los comandos anteriores y el flujo de Git, de lo contrario, <b>REGRESA OTRO DÍA</b> 👺</p>
+    <p id="ojoComn"><b>¡OJO!</b> has clic en el siguiente enlace solo si REALMENTE manejas y comprendes los comandos anteriores y el flujo de Git, de lo contrario, <b>REGRESA OTRO DÍA</b> 👺</p>
     <p id="showCommand"><b>Visualizar el comando</b></p>
     <ul id="contH">
     </ul>
@@ -230,8 +230,9 @@
                 btnVision.innerText = "Cambiar a versión nocturna";
             }
         });
-
+        var aaaa = document.getElementById("ojoComn");
         var txtShowCommand = document.getElementById("showCommand");
+        var txtOjo = document.getElementById("ojoComn");
         var ulHidden = document.getElementById("contH");
         var dataSinBd = [
             {
@@ -252,6 +253,9 @@
 
         txtShowCommand.addEventListener("click", function (e) {
             if (confirm("Es en serio, solo continúa si estas preparado")) {
+                   //estas dos lineas para ocultar los dos ultimos parrafos
+                        aaaa.hidden = true;
+                        txtShowCommand.hidden = true;
                 if (ulHidden.children.length > 0) {
                     return false;
                 }
@@ -263,7 +267,8 @@
                     var descripcion = dataSinBd[0].hiddenContent[0].comandosMagicos[0].descripcion;
                     var srcImg = dataSinBd[0].hiddenContent[0].comandosMagicos[0].img[0].src;
                     var altImg = dataSinBd[0].hiddenContent[0].comandosMagicos[0].img[0].alt;
-    
+                    
+                    
                     //asignaciones
                     ulHidden.append(newLi);
                     if (methodValidator(newLi.insertAdjacentHTML)) 
