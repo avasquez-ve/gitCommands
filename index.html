@@ -230,7 +230,7 @@
                 btnVision.innerText = "Cambiar a versión nocturna";
             }
         });
-        var aaaa = document.getElementById("ojoComn");
+        var txtParrafoHidden = document.getElementById("ojoComn");
         var txtShowCommand = document.getElementById("showCommand");
         var txtOjo = document.getElementById("ojoComn");
         var ulHidden = document.getElementById("contH");
@@ -254,7 +254,7 @@
         txtShowCommand.addEventListener("click", function (e) {
             if (confirm("Es en serio, solo continúa si estas preparado")) {
                    //estas dos lineas para ocultar los dos ultimos parrafos
-                        aaaa.hidden = true;
+                        txtParrafoHidden.hidden = true;
                         txtShowCommand.hidden = true;
                 if (ulHidden.children.length > 0) {
                     return false;
