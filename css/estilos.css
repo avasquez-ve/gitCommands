@@ -9,6 +9,8 @@ header {
 }
 header span {
     padding-left: 10px;
+    position: relative;
+    top: 5px;
 }
 header img {
 
@@ -36,6 +38,8 @@ body {
     background-color: #6e6e6e;
     align-items: center;
     text-align: center;
+    margin-right: 10px;
+
 }
 #showCommand {
     cursor: pointer;
