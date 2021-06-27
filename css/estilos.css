@@ -38,6 +38,8 @@ body {
     background-color: #6e6e6e;
     align-items: center;
     text-align: center;
+    margin-right: 10px;
+
 }
 #showCommand {
     cursor: pointer;
