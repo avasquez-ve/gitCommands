@@ -1,312 +1,780 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
     <title>Comandos y uso Git</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<header>
-    <img src="./img/github_logo.png" alt="Logo de git">
+  </head>
+  <header>
+    <img src="./img/github_logo.png" alt="Logo de git" />
     <span>Comandos de GitHub</span>
-</header>
-<body>
-    <h6 class="fixed" id="changeWeb"><span>Cambiar a versión nocturna</span></h6>
+  </header>
+  <body>
+    <h6 class="fixed" id="changeWeb">
+      <span>Cambiar a versión nocturna</span>
+    </h6>
+
     <h1>Comandos más usados:</h1>
-    <ul>
-        <li><b>git init:</b> se usa para iniciar un nuevo repositorio de Git</li>
-        <li><b>git config --global user.name "Nombre":</b> Configura nombre usuario</li>
-        <li><b>git config --global user.email "email":</b> Configura email usuario</li>
-        <li><b>git status: </b>Muestra el estado de actual de los archivos ubicados en el área de staging</li>
-        <li><b>git add nombreArhivo.extension: </b>Agrega al área de staging el o los archivos.</li>
-        <li><b>git commit -m "Descripcion commit": </b>Agrega los cambios a la BD del repositorio de git</li>
-        <li><b>git commit -am "Descripción commit": </b>Nos ahorra el tener que utilizar <b>git commit .</b>, este comando solo es válido para archivos que ya existen en el repositorio, no afectará a archivos nuevos que no hayan sido agregados con add</li>
-        <li><b>git commit:</b> Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio agregar un comentario para el commit. Para poder editar el comit usar "ESC  i". Para guardar cambios ESC + SHIFT + Z Z</li>
-        <li><b>git log: </b>Muestra el historial detallado con commit e id, de todos los commits en dicho repositorio</li>
-        <li><b>Git log repotenciado:</b> Para tener una visualización más gráfica de tu historial en un repositorio, puedes usar el comando <b>git log --all -decorate- oneline</b> con esto, podrás ver el historial de cambios y ramas de forma más gráfica. <br><img src="img/git_log_all_graph_decorate.png" alt="ver log de commits y ramas historicas en un repositorio"><br></li>
-        <li><b>git log para buscar</b> si deseas buscar palabras que hayas dejado en tus commits, puedes usar <b>git log -S palabra</b>, esto te retornará todos los commits que incluyan la palabra a buscar.</li>
-        <li><b>git diff: </b>Permite ver las diferencias entre el staging y nuestro archivo en local. tiene las variaciones <b>git diff id1 id2</b> donde se comparan dos versiones según los id del commit seleccionado. y <b>git diff --stat</b> donde ves las diferencias más resumidas.</li>
-        <li><b>git show: </b>Se utiliza para ver el commit y la rama en el que te encuentras actualmente.</li>
-        <br>
-        <li><b>git grep:</b> se usa para buscar texto en nuestros archivos del repositorio, puedes ver la cantidad de veces que se usa una palabra, incluso incluir expresiones regulares. Un ejemplo sería usar <b>git gre -n palabra</b> para ver en que archivos y que líneas esta la palabra "palabra" o <b>git grep -c palabra</b> para ver la cantidad de veces que se repite la palabra "palabra"</li>
+    <ul class="mostUsedCommandsList">
+      <li><b>git init:</b> se usa para iniciar un nuevo repositorio de Git</li>
+      <li>
+        <b>git config --global user.name "Nombre":</b> Configura nombre usuario
+      </li>
+      <li>
+        <b>git config --global user.email "email":</b> Configura email usuario
+      </li>
+      <li>
+        <b>git status: </b>Muestra el estado de actual de los archivos ubicados
+        en el área de staging
+      </li>
+      <li>
+        <b>git add nombreArhivo.extension: </b>Agrega al área de staging el o
+        los archivos.
+      </li>
+      <li>
+        <b>git commit -m "Descripcion commit": </b>Agrega los cambios a la BD
+        del repositorio de git
+      </li>
+      <li>
+        <b>git commit -am "Descripción commit": </b>Nos ahorra el tener que
+        utilizar <b>git commit .</b>, este comando solo es válido para archivos
+        que ya existen en el repositorio, no afectará a archivos nuevos que no
+        hayan sido agregados con add
+      </li>
+      <li>
+        <b>git commit:</b> Abrirá el editor Vim para poder agregar un
+        comentario, siempre es obligatorio agregar un comentario para el commit.
+        Para poder editar el comit usar "ESC i". Para guardar cambios ESC +
+        SHIFT + Z Z
+      </li>
+      <li>
+        <b>git log: </b>Muestra el historial detallado con commit e id, de todos
+        los commits en dicho repositorio
+      </li>
+      <li>
+        <b>Git log repotenciado:</b> Para tener una visualización más gráfica de
+        tu historial en un repositorio, puedes usar el comando
+        <b>git log --all -decorate- oneline</b> con esto, podrás ver el
+        historial de cambios y ramas de forma más gráfica. <br /><img
+          src="img/git_log_all_graph_decorate.png"
+          alt="ver log de commits y ramas historicas en un repositorio"
+        /><br />
+      </li>
+      <li>
+        <b>git log para buscar</b> si deseas buscar palabras que hayas dejado en
+        tus commits, puedes usar <b>git log -S palabra</b>, esto te retornará
+        todos los commits que incluyan la palabra a buscar.
+      </li>
+      <li>
+        <b>git diff: </b>Permite ver las diferencias entre el staging y nuestro
+        archivo en local. tiene las variaciones <b>git diff id1 id2</b> donde se
+        comparan dos versiones según los id del commit seleccionado. y
+        <b>git diff --stat</b> donde ves las diferencias más resumidas.
+      </li>
+      <li>
+        <b>git show: </b>Se utiliza para ver el commit y la rama en el que te
+        encuentras actualmente.
+      </li>
+      <br />
+      <li>
+        <b>git grep:</b> se usa para buscar texto en nuestros archivos del
+        repositorio, puedes ver la cantidad de veces que se usa una palabra,
+        incluso incluir expresiones regulares. Un ejemplo sería usar
+        <b>git gre -n palabra</b> para ver en que archivos y que líneas esta la
+        palabra "palabra" o <b>git grep -c palabra</b> para ver la cantidad de
+        veces que se repite la palabra "palabra"
+      </li>
     </ul>
 
     <h1>Comando de consola útiles</h1>
-    <p>Esta sección es un extra, no tiene que ver directamente con Git, pero puede apoyar de una u otra manera tu repositorios.</p>
+    <p>
+      Esta sección es un extra, no tiene que ver directamente con Git, pero
+      puede apoyar de una u otra manera tu repositorios.
+    </p>
     <ul>
-        <li><b>Crear un alias:</b> para resumir comandos que sean muy extensos, se puede utilizar el comando <b>alias nombreNuevoComando="Comando a convertir"</b> de esta manera, podemos usar una palabra más fácil de recordar para nosotros. <br><b>Ejemplo:</b> alias arbolito="git log --all --graph --decorate --oneline"</li>
+      <li>
+        <b>Crear un alias:</b> para resumir comandos que sean muy extensos, se
+        puede utilizar el comando
+        <b>alias nombreNuevoComando="Comando a convertir"</b> de esta manera,
+        podemos usar una palabra más fácil de recordar para nosotros. <br /><b
+          >Ejemplo:</b
+        >
+        alias arbolito="git log --all --graph --decorate --oneline"
+      </li>
     </ul>
 
     <h1>Comandos importantes:</h1>
     <p>Estos comandos se separan ya que tienen funciones muy importantes.</p>
     <ul>
-        <li><b>git reset idCommit --hard/soft</b> Este comando se encarga de regresar a una versión especificada. Se debe tener cuidado con este comando, ya que borrará absolutamente todos los cambios realizados despues de dicho commit. existen dos variastes para el mismo. <b>--hard</b> hará que regrese por completo todo a la versión elegida, perdiendo incluso, los cambios en staging. <b>--soft</b> cumple el mismo rol, pero mantiene los cambios en staging para su posterior commit. </li>
-        <li><b>git reset HEAD (Me encanta XD): </b>Regresa todos los cambios en staging como unstaged. Es decir, revierte el git add.</li>
-        <li><b>git checkout idCommit archivo.extension:</b> Obtiene la versión especificada de dicho archivo. PERO, no elimina sus versiones posteriores. La versión obtenida se tomará como untracked y podrá ser agregada al staging para realizar commit y crear una nueva versión.</li>
-        <li><b>git rm --cached:</b> Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.</li>
-        <li><b>git rm --force:</b> Elimina los archivos del área de Staging y de nuestro disco duro.</li>
-        <ul>Para visualizar todo el historial de git, aunque lo hayamos eliminado, usamos el comando <b>git reflog</b> con este, podemos ver las referencias de los commit e ir y venir entre las distintas versiones con git RESET</ul>
-        <ul><b>Recordatorio:</b> ¡GIT RESET es una mala práctica! Solo usarlo en casos de extrema emergencia y como última opción.</ul>
+      <li>
+        <b>git reset idCommit --hard/soft</b> Este comando se encarga de
+        regresar a una versión especificada. Se debe tener cuidado con este
+        comando, ya que borrará absolutamente todos los cambios realizados
+        despues de dicho commit. existen dos variastes para el mismo.
+        <b>--hard</b> hará que regrese por completo todo a la versión elegida,
+        perdiendo incluso, los cambios en staging. <b>--soft</b> cumple el mismo
+        rol, pero mantiene los cambios en staging para su posterior commit.
+      </li>
+      <li>
+        <b>git reset HEAD (Me encanta XD): </b>Regresa todos los cambios en
+        staging como unstaged. Es decir, revierte el git add.
+      </li>
+      <li>
+        <b>git checkout idCommit archivo.extension:</b> Obtiene la versión
+        especificada de dicho archivo. PERO, no elimina sus versiones
+        posteriores. La versión obtenida se tomará como untracked y podrá ser
+        agregada al staging para realizar commit y crear una nueva versión.
+      </li>
+      <li>
+        <b>git rm --cached:</b> Elimina los archivos del área de Staging y del
+        próximo commit pero los mantiene en nuestro disco duro.
+      </li>
+      <li>
+        <b>git rm --force:</b> Elimina los archivos del área de Staging y de
+        nuestro disco duro.
+      </li>
+      <ul>
+        Para visualizar todo el historial de git, aunque lo hayamos eliminado,
+        usamos el comando
+        <b>git reflog</b>
+        con este, podemos ver las referencias de los commit e ir y venir entre
+        las distintas versiones con git RESET
+      </ul>
+      <ul>
+        <b>Recordatorio:</b>
+        ¡GIT RESET es una mala práctica! Solo usarlo en casos de extrema
+        emergencia y como última opción.
+      </ul>
     </ul>
-    <br>
+    <br />
 
     <h1>Comandos en ramas</h1>
-    <p>Estos son los comandos aplicados para manejarse entre ramas, crear nuevas ramas, etc.</p>
+    <p>
+      Estos son los comandos aplicados para manejarse entre ramas, crear nuevas
+      ramas, etc.
+    </p>
     <ul>
-        <li><b>git branch nameBranch:</b> Se utiliza para crear una nueva rama.</li>
-        <li><b>git checkout nameBranch</b> Se utiliza para dirigirse hacia la rama elegida.</li>
-        <li><b>git branch -D nombreRama</b> se utiliza para eliminar ramas en git.</li>
-        <li><b>git push origin nombreRama</b> se utiliza para enviar a un repositorio remoto la rama que hemos creado</li>
-        <li><b>git merge nombreRama: </b> Este comando es <b>súper importante</b>, se utiliza cuando quieres unir los cambios entre 2 ramas. <br> Cuando tienes los cambios de una nueva que creaste y ya les hiciste commit, puedes hacer un merge para fusionarlos con tu rama de master. El proceso puede ser MASTER -> RAMA_NUEVA o RAMA_NUEVA -> MASTER. Cuando quieres dejar todo en master para tener todo en la rama principal, debe usar la segunda opción.</li><br>
-        <ul>
-            <li><b>Conflictos: </b>En GIT, los conflictos aparecen cuando existen diferencias en las mismas líneas de código de los archivos. Ya sea que un compañero modifico la misma línea de un archivo CSS que tú y tienen diferentes cosas. 
-            <br> Los conflictos son fáciles de solucionar y no debe generarte caos ni confusión. La consola de GIT te indicará el estatus del merge que intentaste realizar. <br> <b>Auto-merging archivo.extension</b> indicará un merge correcto y <b>CONFLICT (Content) archivo.extension</b> indicará un conflicto.
-            <br><br>
-            <img src="img/screenshot_error_merge.png" alt="error de consola al realizar merge" />
-            <br><br>
-            Al revisar nuestro archivo en conflicto, encontraremos algo muy peculiar en el, GIT nos muestra exactamente cual fue la línea en conflictos y cuales son las diferencias entre nuestra rama actual y la que queremos obtener. Así se debe ver al usar el bloc de notas:
-            <br><br>
-            <img src="img/screenshot_error_merge_blocNotas.png" alt="diferencias de código bloc de notas" />
-            <br><br>
-            Debemos elegir entre el código que deseamos dejar en el repositorio y para esto, debemos comunicarnos con la persona que escribió el código (si es que estamos trabajando colaborativamente con alguien más) para decidir que código debe irse a la versión del merge. Posterior a este paso, se deben comentar la línea de <b>"<<<<"</b>, las de <b>"===="</b>  y las de <b>">>>>"</b>  junto con el código que no irá al repositorio.
-            <br>
-            Se deben guardar los cambios en el archivo y realizar un nuevo <b>git add .</b> además de un <b>git commit -m "Comentario relacionado con la solución del conflicto en el merge"</b>
-            <br><br>
-            <b>Adicional:</b> Si usas VSCode, podrás ver que el te da una sugerencia de que hacer con los cambios:
-            <br><br>
-            <img src="img/screenshot_error_merge_code.png" alt="diferencias de código VSCode" />
-            <br><br>
-            Si eliges <b>Accept Current Change</b> estarás dejando los cambios de la rama actual, en cambio, si elgies <b>Accept Incoming Change</b> estarás obteniendo los cambios de la rama desde la cual estás obteniendo los cambios.
-            </li>
-            <li><b>Publicar ramas en repositorio remotos:</b> Si deseas que tu rama pueda ser usada/visualizada  por otros desarrolladores en un repositorio remoto, debes usar el comando <b>git push origin nombreRama</b></li>
-        </ul>
+      <li>
+        <b>git branch nameBranch:</b> Se utiliza para crear una nueva rama.
+      </li>
+      <li>
+        <b>git checkout nameBranch</b> Se utiliza para dirigirse hacia la rama
+        elegida.
+      </li>
+      <li>
+        <b>git branch -D nombreRama</b> se utiliza para eliminar ramas en git.
+      </li>
+      <li>
+        <b>git push origin nombreRama</b> se utiliza para enviar a un
+        repositorio remoto la rama que hemos creado
+      </li>
+      <li>
+        <b>git merge nombreRama: </b> Este comando es <b>súper importante</b>,
+        se utiliza cuando quieres unir los cambios entre 2 ramas. <br />
+        Cuando tienes los cambios de una nueva que creaste y ya les hiciste
+        commit, puedes hacer un merge para fusionarlos con tu rama de master. El
+        proceso puede ser MASTER -> RAMA_NUEVA o RAMA_NUEVA -> MASTER. Cuando
+        quieres dejar todo en master para tener todo en la rama principal, debe
+        usar la segunda opción.
+      </li>
+      <br />
+      <ul>
+        <li>
+          <b>Conflictos: </b>En GIT, los conflictos aparecen cuando existen
+          diferencias en las mismas líneas de código de los archivos. Ya sea que
+          un compañero modifico la misma línea de un archivo CSS que tú y tienen
+          diferentes cosas. <br />
+          Los conflictos son fáciles de solucionar y no debe generarte caos ni
+          confusión. La consola de GIT te indicará el estatus del merge que
+          intentaste realizar. <br />
+          <b>Auto-merging archivo.extension</b> indicará un merge correcto y
+          <b>CONFLICT (Content) archivo.extension</b> indicará un conflicto.
+          <br /><br />
+          <img
+            src="img/screenshot_error_merge.png"
+            alt="error de consola al realizar merge"
+          />
+          <br /><br />
+          Al revisar nuestro archivo en conflicto, encontraremos algo muy
+          peculiar en el, GIT nos muestra exactamente cual fue la línea en
+          conflictos y cuales son las diferencias entre nuestra rama actual y la
+          que queremos obtener. Así se debe ver al usar el bloc de notas:
+          <br /><br />
+          <img
+            src="img/screenshot_error_merge_blocNotas.png"
+            alt="diferencias de código bloc de notas"
+          />
+          <br /><br />
+          Debemos elegir entre el código que deseamos dejar en el repositorio y
+          para esto, debemos comunicarnos con la persona que escribió el código
+          (si es que estamos trabajando colaborativamente con alguien más) para
+          decidir que código debe irse a la versión del merge. Posterior a este
+          paso, se deben comentar la línea de <b>"<<<<"</b>, las de
+          <b>"===="</b> y las de <b>">>>>"</b> junto con el código que no irá al
+          repositorio.
+          <br />
+          Se deben guardar los cambios en el archivo y realizar un nuevo
+          <b>git add .</b> además de un
+          <b
+            >git commit -m "Comentario relacionado con la solución del conflicto
+            en el merge"</b
+          >
+          <br /><br />
+          <b>Adicional:</b> Si usas VSCode, podrás ver que el te da una
+          sugerencia de que hacer con los cambios: <br /><br />
+          <img
+            src="img/screenshot_error_merge_code.png"
+            alt="diferencias de código VSCode"
+          />
+          <br /><br />
+          Si eliges <b>Accept Current Change</b> estarás dejando los cambios de
+          la rama actual, en cambio, si elgies
+          <b>Accept Incoming Change</b> estarás obteniendo los cambios de la
+          rama desde la cual estás obteniendo los cambios.
+        </li>
+        <li>
+          <b>Publicar ramas en repositorio remotos:</b> Si deseas que tu rama
+          pueda ser usada/visualizada por otros desarrolladores en un
+          repositorio remoto, debes usar el comando
+          <b>git push origin nombreRama</b>
+        </li>
+      </ul>
     </ul>
-    <br>
+    <br />
 
     <h1>Repositorios remotos - GitHub</h1>
-    <p>Conoceremos como poder conectar nuestro repositorio local con algún repositorio remoto, subir nuestros cambios a dicho repositorio, obtener los cambios desde el repositorio y mucho más.</p>
-    <p>Para este caso de prueba utilizaremos el repositorio remoto más conocido del mundo, <a href="https://github.com/">GitHub</a>.</p>
+    <p>
+      Conoceremos como poder conectar nuestro repositorio local con algún
+      repositorio remoto, subir nuestros cambios a dicho repositorio, obtener
+      los cambios desde el repositorio y mucho más.
+    </p>
+    <p>
+      Para este caso de prueba utilizaremos el repositorio remoto más conocido
+      del mundo, <a href="https://github.com/">GitHub</a>.
+    </p>
     <ol>
-        <li>Primero, debemos crearnos una cuenta en GitHub y crear un nuevo repositorio. Preferiblemente, debemos crear el archivo README ya que a través de el podremos indicarle a otros desarrolladores de que va nuestro código.</li><br>
-        <li>Luego de crear el repositorio, Github nos dará la url del mismo, esta la utilizaremos para agregar este origen remoto desde nuestro repositorio local. Se debe copiar la ruta HTTPS que github nos dió: <br><br> <img src="img/url_repo_github.png" alt="url de nuestro repositorio remoto"><br><br></li>
-        <li>Usar el comando <b>git remote add origin urlRepositorioRemoto</b> con esto, estaremos agregando la referencia del repositorio remoto a nuestro repositorio en local. Posterior a esto, la consola de git no arrojará ningún mensaje, pero si usamos el comando <b>git remove -v</b> podremos visualizar el repositorio remoto al que hacemos referencia actualmente. 
-        <br><br>
-        <img src="img/git_remote_v.png" alt="git remote -v para ver la referencia del repositorio remoto">
-        <br><br>
-        Te dejo la url de este mismo repositorio para que puedas probar: <b>https://github.com/avasquez-ve/gitCommands.git</b></li><br>
-        <li>Como ya tenemos la referencia del repositorio remoto, ahora debemos obtener la historia que se encuentre en dicho repositorio, esta acción se debe realizar siempre antes de enviar los cambios desde el repositorio local. <br><br> Si el repositorio remoto es diferente a nuestro repositorio local, es probable que Git nos de un warning con el mensaje <b>"refusing to merge unrelated histories"</b> esto quiere decir que no puede hacer la fusión debido a que las historias de los dos repositorios son diferentes. Para forzar esta acción y poder obtener la historia del repositorio remoto debemos usar el comando <b>git pull origin master --allow-unrelated-histories</b> para permitir unir ambas historias.</li>
-        <br><br>
-        <img src="img/git_pull_origin_master.png" alt="git pull origin master, mensajes de advertencia">
-        <br><br>
+      <li>
+        Primero, debemos crearnos una cuenta en GitHub y crear un nuevo
+        repositorio. Preferiblemente, debemos crear el archivo README ya que a
+        través de el podremos indicarle a otros desarrolladores de que va
+        nuestro código.
+      </li>
+      <br />
+      <li>
+        Luego de crear el repositorio, Github nos dará la url del mismo, esta la
+        utilizaremos para agregar este origen remoto desde nuestro repositorio
+        local. Se debe copiar la ruta HTTPS que github nos dió: <br /><br />
+        <img
+          src="img/url_repo_github.png"
+          alt="url de nuestro repositorio remoto"
+        /><br /><br />
+      </li>
+      <li>
+        Usar el comando <b>git remote add origin urlRepositorioRemoto</b> con
+        esto, estaremos agregando la referencia del repositorio remoto a nuestro
+        repositorio en local. Posterior a esto, la consola de git no arrojará
+        ningún mensaje, pero si usamos el comando <b>git remove -v</b> podremos
+        visualizar el repositorio remoto al que hacemos referencia actualmente.
+        <br /><br />
+        <img
+          src="img/git_remote_v.png"
+          alt="git remote -v para ver la referencia del repositorio remoto"
+        />
+        <br /><br />
+        Te dejo la url de este mismo repositorio para que puedas probar:
+        <b>https://github.com/avasquez-ve/gitCommands.git</b>
+      </li>
+      <br />
+      <li>
+        Como ya tenemos la referencia del repositorio remoto, ahora debemos
+        obtener la historia que se encuentre en dicho repositorio, esta acción
+        se debe realizar siempre antes de enviar los cambios desde el
+        repositorio local. <br /><br />
+        Si el repositorio remoto es diferente a nuestro repositorio local, es
+        probable que Git nos de un warning con el mensaje
+        <b>"refusing to merge unrelated histories"</b> esto quiere decir que no
+        puede hacer la fusión debido a que las historias de los dos repositorios
+        son diferentes. Para forzar esta acción y poder obtener la historia del
+        repositorio remoto debemos usar el comando
+        <b>git pull origin master --allow-unrelated-histories</b> para permitir
+        unir ambas historias.
+      </li>
+      <br /><br />
+      <img
+        src="img/git_pull_origin_master.png"
+        alt="git pull origin master, mensajes de advertencia"
+      />
+      <br /><br />
 
-        <li>Con el comando <b>ls -al</b> podremos ver el archivo <b>README</b> creado desde GitHub. Y al ejecutar <b>git log</b> también veremos el commit hecho en GitHub para dicho archivo. 
-        <br><br>
-        <img src="img/ls-al.png" alt="comando ls -al. Usado para visualizar en forma de lista los archivos visibles y ocultos de un directorio">
-        <br><br>
-        </li>
-        <li>Ahora, para subir los cambios locales al repositorio, debemos usar el comando <b>git push origin master</b>, con esto, ya nuestros cambios locales estarán dentro del repositorio remoto. Recordar siempre que este comando lo debemos ejecutar desde la <b>rama master</b> para no generar conflictos.</li>
-        <br><br>
-        <img src="img/git_push_origin_master.png" alt="comando git push origin master. Usado para subir los cambios hacia un repositorio remoto">
-        <br><br>
-        <p>Así quedó nuestro repositorio remoto en GitHub luego de agregar los cambios desde el repositorio local</p>
-        <br>
-        <img src="img/proyectoGitHub.png" alt="repositorio en GitHub">
-        <br>
+      <li>
+        Con el comando <b>ls -al</b> podremos ver el archivo
+        <b>README</b> creado desde GitHub. Y al ejecutar <b>git log</b> también
+        veremos el commit hecho en GitHub para dicho archivo. <br /><br />
+        <img
+          src="img/ls-al.png"
+          alt="comando ls -al. Usado para visualizar en forma de lista los archivos visibles y ocultos de un directorio"
+        />
+        <br /><br />
+      </li>
+      <li>
+        Ahora, para subir los cambios locales al repositorio, debemos usar el
+        comando <b>git push origin master</b>, con esto, ya nuestros cambios
+        locales estarán dentro del repositorio remoto. Recordar siempre que este
+        comando lo debemos ejecutar desde la <b>rama master</b> para no generar
+        conflictos.
+      </li>
+      <br /><br />
+      <img
+        src="img/git_push_origin_master.png"
+        alt="comando git push origin master. Usado para subir los cambios hacia un repositorio remoto"
+      />
+      <br /><br />
+      <p>
+        Así quedó nuestro repositorio remoto en GitHub luego de agregar los
+        cambios desde el repositorio local
+      </p>
+      <br />
+      <img src="img/proyectoGitHub.png" alt="repositorio en GitHub" />
+      <br />
     </ol>
 
     <h1>Configurar tus llaves SSH en local</h1>
-    <p>Aprenderemos como usar las llaves SSH para conectarnos a GitHub usando SSH y dejar a un lado HTTPS</p>
-    <p>Para hacer nuestra conexión aún más segura, podemos usar llaves encriptadas, con las cuales enviamos nuestros datos cifrados. Dichos datos solo podrán ser decifrados con una llave pública que compartiremos con GitHub.</p>
+    <p>
+      Aprenderemos como usar las llaves SSH para conectarnos a GitHub usando SSH
+      y dejar a un lado HTTPS
+    </p>
+    <p>
+      Para hacer nuestra conexión aún más segura, podemos usar llaves
+      encriptadas, con las cuales enviamos nuestros datos cifrados. Dichos datos
+      solo podrán ser decifrados con una llave pública que compartiremos con
+      GitHub.
+    </p>
     <ol>
-        <li><b>Primer paso:</b> Generar las llaves SSH con el comando <br> <b>ssh-keygen -t rsa -b 4096 -C "tu@email.com"</b> <br> debemos usar el mismo email que usamos para Github. Tomar en cuenta que luego de apretar enter, nos va a sugerir agregarle una contraseña a dicha llave para hacerla aún más segura. Este paso es opcional, si no queremos agregarle una contraseña solo aprietas ENTER.</li><br>
-        <li><b>Las llaves se guardaran</b> en una carpeta oculta llamada .ssh donde tendremos la llave pública <b>id_rsa.pub</b> y la privada <b>id_rsa</b> NOTA: La llave privada <b>jamás</b> se debe compartir con nadie ni con ningún otro dispositivo.</li><br>
-        <li><b>Segundo paso:</b> para terminar de configurar las claves, debemos comprobar que el servidor se encuentre activo, para esto usar el comando <br> <b>eval $(ssh-agent -s)</b> <br> lo cual nos debería retornar un mensaje <b>Agent pid numeroAleatorio</b></li><br>
-        <li><b>Tercer y último paso:</b> ahora, solo debemos agregar al servidor nuestra llave privada, para esto, usar el comando <br> <b>ssh-add ruta-donde-guardaste-tu-llave-privada</b> <br> Y listo, ya tendremos configurada nuestra llave privada para poder conectarnos a través de SSH con GitHub</li><br>
+      <li>
+        <b>Primer paso:</b> Generar las llaves SSH con el comando <br />
+        <b>ssh-keygen -t rsa -b 4096 -C "tu@email.com"</b> <br />
+        debemos usar el mismo email que usamos para Github. Tomar en cuenta que
+        luego de apretar enter, nos va a sugerir agregarle una contraseña a
+        dicha llave para hacerla aún más segura. Este paso es opcional, si no
+        queremos agregarle una contraseña solo aprietas ENTER.
+      </li>
+      <br />
+      <li>
+        <b>Las llaves se guardaran</b> en una carpeta oculta llamada .ssh donde
+        tendremos la llave pública <b>id_rsa.pub</b> y la privada
+        <b>id_rsa</b> NOTA: La llave privada <b>jamás</b> se debe compartir con
+        nadie ni con ningún otro dispositivo.
+      </li>
+      <br />
+      <li>
+        <b>Segundo paso:</b> para terminar de configurar las claves, debemos
+        comprobar que el servidor se encuentre activo, para esto usar el comando
+        <br />
+        <b>eval $(ssh-agent -s)</b> <br />
+        lo cual nos debería retornar un mensaje <b>Agent pid numeroAleatorio</b>
+      </li>
+      <br />
+      <li>
+        <b>Tercer y último paso:</b> ahora, solo debemos agregar al servidor
+        nuestra llave privada, para esto, usar el comando <br />
+        <b>ssh-add ruta-donde-guardaste-tu-llave-privada</b> <br />
+        Y listo, ya tendremos configurada nuestra llave privada para poder
+        conectarnos a través de SSH con GitHub
+      </li>
+      <br />
     </ol>
 
     <h1>Conectarnos a Github a través de SSH</h1>
-    <p>Luego de haber creado y configurado nuestra llave privada. Debemos configurar nuestra llave pública (la única que podemos compartir) con Github. Es importante tener en cuenta que debemos realizar los pasos anteriores, de lo contrario, no podremos continuar con este paso.</p>
+    <p>
+      Luego de haber creado y configurado nuestra llave privada. Debemos
+      configurar nuestra llave pública (la única que podemos compartir) con
+      Github. Es importante tener en cuenta que debemos realizar los pasos
+      anteriores, de lo contrario, no podremos continuar con este paso.
+    </p>
     <ol>
-        <li><B>Como primer paso:</B> debemos agregar nuestra llave pública a nuestra cuenta de Github. Para eso debemos copiar el contenido de nuestra llave publica, ubicada en el archivo <b>id_rsa.pub</b></li><br>
-        <li><b>El segundo paso es:</b> Ingresar en nuestra cuenta de Github y dirigirnos a la configuración y posteriormente a la gestion de KEYS SSH <br> url: <a href="https://github.com/settings/keys">https://github.com/settings/keys</a><br> Debemos hacer click en  <b>New SSH Key</b> <br> <img src="img/crear_nueva_key_ssh.png" alt="boton crear nueva key ssh"><br> y luego agregar como título, el pc que tendrá asignado dicha key publica, esto es para poder identificarlo, ya que podemos tener varios equipos conectados por SSH a nuestros repositorios. Al finalizar, hacer click en <b>Add SSH KEY</b><br><img src="img/agregando_key.png" alt="agregando key ssh"><br> </li><br>
-        <li>Ahora podremos ver que nuestra key SSH se agregó correctamente <br><img src="img/identificador_ssh_key.png" alt="ver key agregada"><br></li><br>
+      <li>
+        <b>Como primer paso:</b> debemos agregar nuestra llave pública a nuestra
+        cuenta de Github. Para eso debemos copiar el contenido de nuestra llave
+        publica, ubicada en el archivo <b>id_rsa.pub</b>
+      </li>
+      <br />
+      <li>
+        <b>El segundo paso es:</b> Ingresar en nuestra cuenta de Github y
+        dirigirnos a la configuración y posteriormente a la gestion de KEYS SSH
+        <br />
+        url:
+        <a href="https://github.com/settings/keys"
+          >https://github.com/settings/keys</a
+        ><br />
+        Debemos hacer click en <b>New SSH Key</b> <br />
+        <img
+          src="img/crear_nueva_key_ssh.png"
+          alt="boton crear nueva key ssh"
+        /><br />
+        y luego agregar como título, el pc que tendrá asignado dicha key
+        publica, esto es para poder identificarlo, ya que podemos tener varios
+        equipos conectados por SSH a nuestros repositorios. Al finalizar, hacer
+        click en <b>Add SSH KEY</b><br /><img
+          src="img/agregando_key.png"
+          alt="agregando key ssh"
+        /><br />
+      </li>
+      <br />
+      <li>
+        Ahora podremos ver que nuestra key SSH se agregó correctamente
+        <br /><img
+          src="img/identificador_ssh_key.png"
+          alt="ver key agregada"
+        /><br />
+      </li>
+      <br />
 
-        <li><b>Como siguiente paso</b>, debemos configurar nuestro repositorio local para dejar de usar HTTPS y empezar a usar SSH con nuestras nuevas keys. Para esto, debemos ir a nuestro repositorio y ejecutar el comando <br> <b>git remote set-url origin url-ssh-del-repositorio-en-github</b> <br> Con esto estaremos cambiando la url del repositorio en github. Podemos comprobar la nueva url usando <b>git remove -v</b></li><b></b>
-        <li>Ahora puedes hacer un <b>git pull origin master</b> confirmar los mensajes, realizar cambios en tu repositorio local y hacer un <b>git push origin master</b></li>
+      <li>
+        <b>Como siguiente paso</b>, debemos configurar nuestro repositorio local
+        para dejar de usar HTTPS y empezar a usar SSH con nuestras nuevas keys.
+        Para esto, debemos ir a nuestro repositorio y ejecutar el comando <br />
+        <b>git remote set-url origin url-ssh-del-repositorio-en-github</b>
+        <br />
+        Con esto estaremos cambiando la url del repositorio en github. Podemos
+        comprobar la nueva url usando <b>git remove -v</b>
+      </li>
+      <b></b>
+      <li>
+        Ahora puedes hacer un <b>git pull origin master</b> confirmar los
+        mensajes, realizar cambios en tu repositorio local y hacer un
+        <b>git push origin master</b>
+      </li>
     </ol>
 
     <h1>Tags y versiones en Git y GitHub</h1>
-    <p>Los tags nos permiten asignar versiones a los commits con cambios más importantes o significativos en nuestro proyecto. A continuación, se presentan los comandos para trabajar con las etiquetas:</p>
+    <p>
+      Los tags nos permiten asignar versiones a los commits con cambios más
+      importantes o significativos en nuestro proyecto. A continuación, se
+      presentan los comandos para trabajar con las etiquetas:
+    </p>
     <ul>
-        <li><b>Crear un tag: </b> antes de crear un tag se debe elegir el commit el cual queremos identificar, para esto, podemos hacer un: <br><br><b>git log --all --graph --decorate --oneline</b> o un <b>git log --all --oneline</b> y copiar el id del commit. <br><br> Se usan los comandos anteriores para poder obtener el id más corto. <br> Luego, ejecutamos el comando para crear el tag <b>git tag -a nombreDelTag -m "Comentario asociado al tag" idDelCommit</b></li><br>
-        <li><b>Visualizar tags creados:</b> Para visualizar los tags que tenemos creados podemos usar los comandos <b>git tag</b> o <b>git show-ref --tags</b> con el primero, solo veremos el nombre del tag y con el segundo, podremos ver el commit generado al crear el tag y la ubicacion.</li><br>
-        <li><b>Enviar tags a un repositorio remoto: </b>Para publicar nuestros tags se debe usar el comando <b>git push origin --tags</b> si te das cuenta, se hace diferente a publicar un commit común.</li>
-        <li><b>Eliminar tags:</b> Los tags son publicados en Github como releases, versiones estables de nuestro código que deberían funcionar sin problemas. Si llegas a publicar un tag por equivocación, puedes borrarlo con los siguientes dos comandos: <br><br> <b>git tag -d nombreDelTag</b> con esto estaremos borrando el tag en el repositorio local. Para eliminarlo del repositorio remoto se debe usar <b>git push origin :refs/tags/nombreDelTag</b></li>
+      <li>
+        <b>Crear un tag: </b> antes de crear un tag se debe elegir el commit el
+        cual queremos identificar, para esto, podemos hacer un: <br /><br /><b
+          >git log --all --graph --decorate --oneline</b
+        >
+        o un <b>git log --all --oneline</b> y copiar el id del commit.
+        <br /><br />
+        Se usan los comandos anteriores para poder obtener el id más corto.
+        <br />
+        Luego, ejecutamos el comando para crear el tag
+        <b
+          >git tag -a nombreDelTag -m "Comentario asociado al tag"
+          idDelCommit</b
+        >
+      </li>
+      <br />
+      <li>
+        <b>Visualizar tags creados:</b> Para visualizar los tags que tenemos
+        creados podemos usar los comandos <b>git tag</b> o
+        <b>git show-ref --tags</b> con el primero, solo veremos el nombre del
+        tag y con el segundo, podremos ver el commit generado al crear el tag y
+        la ubicacion.
+      </li>
+      <br />
+      <li>
+        <b>Enviar tags a un repositorio remoto: </b>Para publicar nuestros tags
+        se debe usar el comando <b>git push origin --tags</b> si te das cuenta,
+        se hace diferente a publicar un commit común.
+      </li>
+      <li>
+        <b>Eliminar tags:</b> Los tags son publicados en Github como releases,
+        versiones estables de nuestro código que deberían funcionar sin
+        problemas. Si llegas a publicar un tag por equivocación, puedes borrarlo
+        con los siguientes dos comandos: <br /><br />
+        <b>git tag -d nombreDelTag</b> con esto estaremos borrando el tag en el
+        repositorio local. Para eliminarlo del repositorio remoto se debe usar
+        <b>git push origin :refs/tags/nombreDelTag</b>
+      </li>
     </ul>
 
     <h1>Usando Rebase</h1>
-    <p>Rebase se utiliza para unir los cambios que tengamos en una rama con nuestra rama master y no dejar rastros de la existencia de dicha rama creada.</p>
-    <p>El rebase es útil, por ejemplo, si estamos realizando arreglos de un bug y no se desean mostrar estos cambios como tomados de una rama, si no como parte del flujo normal de la aplicación.</p>
-    <p>Rebase se encarga de ajustar los cambios al momento en que se realizaron y hacer un merge desde el primer commit, no desde el último (como funciona normalmente un flujo en git)</p>
+    <p>
+      Rebase se utiliza para unir los cambios que tengamos en una rama con
+      nuestra rama master y no dejar rastros de la existencia de dicha rama
+      creada.
+    </p>
+    <p>
+      El rebase es útil, por ejemplo, si estamos realizando arreglos de un bug y
+      no se desean mostrar estos cambios como tomados de una rama, si no como
+      parte del flujo normal de la aplicación.
+    </p>
+    <p>
+      Rebase se encarga de ajustar los cambios al momento en que se realizaron y
+      hacer un merge desde el primer commit, no desde el último (como funciona
+      normalmente un flujo en git)
+    </p>
     <ul>
-        <li>Para hacer un rebase, primero debemos crear una nueva rama, posicionarnos en dicha rama con <b>git checkout</b> y realizar los cambios.</li>
-        <li>Luego de tener nuestros cambios, debemos ejecutar el comando <b>git rebase master</b> desde nuestra rama de cambios <b>es importante que git rebase se haga desde la rama con los cambios primero</b></li>
-        <li>Con esto, ya tendremos unidas las historias de master con nuestra nueva rama. Posteior a esto se debe realizar checkout a mastery ejecutar el rebase desde master apuntando a nuestra rama de cambios <b>git rebase nombreRamaCambios</b></li>
-        <li>Esto lo que hará es integrar master con nuestra rama de cambios y luego pasarla a master nuevamente con todos los cambios incluidos, como un merge.</li>
-        <li><b>Nota: </b>Usar rebase es una mala práctica, ya que no tenemos historia de lo que sucede, no se sabe quien hizo que cambios y en ocasiones, si master avanzó mucho, se pueden generar muchos conflictos.</li>
+      <li>
+        Para hacer un rebase, primero debemos crear una nueva rama,
+        posicionarnos en dicha rama con <b>git checkout</b> y realizar los
+        cambios.
+      </li>
+      <li>
+        Luego de tener nuestros cambios, debemos ejecutar el comando
+        <b>git rebase master</b> desde nuestra rama de cambios
+        <b
+          >es importante que git rebase se haga desde la rama con los cambios
+          primero</b
+        >
+      </li>
+      <li>
+        Con esto, ya tendremos unidas las historias de master con nuestra nueva
+        rama. Posteior a esto se debe realizar checkout a mastery ejecutar el
+        rebase desde master apuntando a nuestra rama de cambios
+        <b>git rebase nombreRamaCambios</b>
+      </li>
+      <li>
+        Esto lo que hará es integrar master con nuestra rama de cambios y luego
+        pasarla a master nuevamente con todos los cambios incluidos, como un
+        merge.
+      </li>
+      <li>
+        <b>Nota: </b>Usar rebase es una mala práctica, ya que no tenemos
+        historia de lo que sucede, no se sabe quien hizo que cambios y en
+        ocasiones, si master avanzó mucho, se pueden generar muchos conflictos.
+      </li>
     </ul>
 
     <h1>Usando Git Stash</h1>
-    <p>Git stash es muy útil cuando tienes cambios que no deseas realizarle commits aún, o para realizar pruebas, experimentos que no requieran o no quieras crear una rama para poder visualizarlos</p>
-    <p>El stash es una forma de almacenar tus cambios pendientes para luego poder obtenerlos y hacerles commit, incluso puedes crear una rama con esos cambios pendientes, hacerle commit en la nueva rama y luego realizar un merge en master.</p>
+    <p>
+      Git stash es muy útil cuando tienes cambios que no deseas realizarle
+      commits aún, o para realizar pruebas, experimentos que no requieran o no
+      quieras crear una rama para poder visualizarlos
+    </p>
+    <p>
+      El stash es una forma de almacenar tus cambios pendientes para luego poder
+      obtenerlos y hacerles commit, incluso puedes crear una rama con esos
+      cambios pendientes, hacerle commit en la nueva rama y luego realizar un
+      merge en master.
+    </p>
     <p>Pasos para usar Stash</p>
     <ul>
-        <li>Primero, puedes realizar cualquier cambio en un documento y guardar los cambios.</li>
-        <li>Luego, usar el comando <b>git stash</b>, esto guardará tus cambios pendientes en un listado de WIP (Work in Process).</li>
-        <li>El listado lo puedes consultar usando <b>git stash list</b></li>
-        <li>Para obtener los cambios pendientes, debes usar el comando <b>git stash pop</b> ¡OJO! esto lo debes realizar en la misma rama que estabas creando los cambios, ya que si haces pop en una rama diferente, puedes generar un conflicto.</li>
-        <li>Una alternativa para guardar tus cambios pendientes y visualizarlos sin tocar la rama master, es usa el comando <b>git stash branch nombreRama</b> esto creará automáticamente una nueva rama con los cambios que estaban en el stash</li>
-        <li><b>Eliminar un stash</b> si deseas eliminar un stash, puedes usar el comando <b>git stash drop</b> esto eliminará el stash que tengas y dejará la versión original.</li>
+      <li>
+        Primero, puedes realizar cualquier cambio en un documento y guardar los
+        cambios.
+      </li>
+      <li>
+        Luego, usar el comando <b>git stash</b>, esto guardará tus cambios
+        pendientes en un listado de WIP (Work in Process).
+      </li>
+      <li>El listado lo puedes consultar usando <b>git stash list</b></li>
+      <li>
+        Para obtener los cambios pendientes, debes usar el comando
+        <b>git stash pop</b> ¡OJO! esto lo debes realizar en la misma rama que
+        estabas creando los cambios, ya que si haces pop en una rama diferente,
+        puedes generar un conflicto.
+      </li>
+      <li>
+        Una alternativa para guardar tus cambios pendientes y visualizarlos sin
+        tocar la rama master, es usa el comando
+        <b>git stash branch nombreRama</b> esto creará automáticamente una nueva
+        rama con los cambios que estaban en el stash
+      </li>
+      <li>
+        <b>Eliminar un stash</b> si deseas eliminar un stash, puedes usar el
+        comando <b>git stash drop</b> esto eliminará el stash que tengas y
+        dejará la versión original.
+      </li>
     </ul>
 
     <h1>Git Clean</h1>
-    <p>Este comando es utilizado para eliminar archivos que no forman parte de nuestro directorio de trabajo, archivos como .logs, resultados de una compilación, etc.</p>
+    <p>
+      Este comando es utilizado para eliminar archivos que no forman parte de
+      nuestro directorio de trabajo, archivos como .logs, resultados de una
+      compilación, etc.
+    </p>
     <ul>
-        <li>Para eliminar dichos archivos podemos probar creando copias de archivos existentes en nuestro repositorio</li>
-        <li>Luego, ejecutar <b>git clean --dry-run</b> esto se usa para verificar que eliminará git clean</li>
-        <li>Al confirmar lo que borrará, ejecutamos <b>git clean -f</b> con esto, ya estaremos borrando dichos archivos</li>
-        <li><b>Nota:</b> Git no eliminará los archivos que se encuentren dentro del .gitignore, tampoco eliminará los archivos que tengan el mismo nombre, asi esten en directorios distintos.</li>
+      <li>
+        Para eliminar dichos archivos podemos probar creando copias de archivos
+        existentes en nuestro repositorio
+      </li>
+      <li>
+        Luego, ejecutar <b>git clean --dry-run</b> esto se usa para verificar
+        que eliminará git clean
+      </li>
+      <li>
+        Al confirmar lo que borrará, ejecutamos <b>git clean -f</b> con esto, ya
+        estaremos borrando dichos archivos
+      </li>
+      <li>
+        <b>Nota:</b> Git no eliminará los archivos que se encuentren dentro del
+        .gitignore, tampoco eliminará los archivos que tengan el mismo nombre,
+        asi esten en directorios distintos.
+      </li>
     </ul>
 
     <h1>Git cherry pick</h1>
-    <p>Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la rama, para eso utilizamos el comando git cherry-pick IDCommit.</p>
-    <p>cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia.</p>
+    <p>
+      Existe un mundo alternativo en el cual vamos avanzando en una rama pero
+      necesitamos en master uno de esos avances de la rama, para eso utilizamos
+      el comando git cherry-pick IDCommit.
+    </p>
+    <p>
+      cherry-pick es una mala práctica porque significa que estamos
+      reconstruyendo la historia.
+    </p>
     <ul>
-        <li>Para usar cherry pick, debes ejecutar el comando git cherry-pick IDCommit desde la rama donde deseas traer los cambios de dicho commit.</li>
-        <li>Es posible que genere conflictos este comando, así que debes tenerlo en cuenta para poder hacer el cherry pick.</li>
+      <li>
+        Para usar cherry pick, debes ejecutar el comando git cherry-pick
+        IDCommit desde la rama donde deseas traer los cambios de dicho commit.
+      </li>
+      <li>
+        Es posible que genere conflictos este comando, así que debes tenerlo en
+        cuenta para poder hacer el cherry pick.
+      </li>
     </ul>
 
     <h1>Git amend</h1>
-    <p>A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más.</p>
-    <p>Amend remienda nuestro error y los cambios que hicimos nos los permite agregar al commit más reciente.</p>
+    <p>
+      A veces hacemos un commit, pero resulta que no queríamos mandarlo porque
+      faltaba algo más.
+    </p>
+    <p>
+      Amend remienda nuestro error y los cambios que hicimos nos los permite
+      agregar al commit más reciente.
+    </p>
     <ul>
-        <li>Para esto, se debe hacer los cambios necesario, <b>hacer un git add</b> y posterior a esto, ejecutar el comando <b>git commit --amend</b></li>
+      <li>
+        Para esto, se debe hacer los cambios necesario,
+        <b>hacer un git add</b> y posterior a esto, ejecutar el comando
+        <b>git commit --amend</b>
+      </li>
     </ul>
 
     <h1>Magia para desarolladores</h1>
-    <p>Si has llegado hasta aquí y ya manejas de memoria los principales comandos de git, los comandos para las ramas,sabes hacer un merge sin caer en la locura y trabajar con repositorios remotos.</p>
-    <p>Te dejo un buen comando de git que te ayudará a ver fácilmente tu historial de commits.</p>
-    <p id="ojoComn"><b>¡OJO!</b> has clic en el siguiente enlace solo si REALMENTE manejas y comprendes los comandos anteriores y el flujo de Git, de lo contrario, <b>REGRESA OTRO DÍA</b> 👺</p>
+    <p>
+      Si has llegado hasta aquí y ya manejas de memoria los principales comandos
+      de git, los comandos para las ramas,sabes hacer un merge sin caer en la
+      locura y trabajar con repositorios remotos.
+    </p>
+    <p>
+      Te dejo un buen comando de git que te ayudará a ver fácilmente tu
+      historial de commits.
+    </p>
+    <p id="ojoComn">
+      <b>¡OJO!</b> has clic en el siguiente enlace solo si REALMENTE manejas y
+      comprendes los comandos anteriores y el flujo de Git, de lo contrario,
+      <b>REGRESA OTRO DÍA</b> 👺
+    </p>
     <p id="showCommand"><b>Visualizar el comando</b></p>
-    <ul id="contH">
-    </ul>
-    
+    <ul id="contH"></ul>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function (e) {
-            var date = new Date();
-            var hours = date.getHours();
-            if (hours >= 20 || hours <= 7) {
-                setTimeout(function() {
-                    if (confirm("Al parecer ya se hizo de noche, ¿deseas activar el modo nocturno?")) {
-                        document.body.style.backgroundColor = '#2d2d2d';
-                        document.body.style.color = '#FFFFFF';
-                        btnVision.innerText = "Cambiar a versión normal";
-                    }
-                },4000);
+      document.addEventListener("DOMContentLoaded", function (e) {
+        var date = new Date();
+        var hours = date.getHours();
+        if (hours >= 20 || hours <= 7) {
+          setTimeout(function () {
+            if (
+              confirm(
+                "Al parecer ya se hizo de noche, ¿deseas activar el modo nocturno?"
+              )
+            ) {
+              document.body.style.backgroundColor = "#2d2d2d";
+              document.body.style.color = "#FFFFFF";
+              btnVision.innerText = "Cambiar a versión normal";
             }
-        });
+          }, 4000);
+        }
+      });
 
-        var btnVision = document.getElementById("changeWeb");
-        btnVision.addEventListener("click", function (e) {
-            var txtBtnVision = btnVision.innerText;
+      var btnVision = document.getElementById("changeWeb");
+      btnVision.addEventListener("click", function (e) {
+        var txtBtnVision = btnVision.innerText;
 
-            if (txtBtnVision == "Cambiar a versión nocturna") {
-                document.body.style.backgroundColor = '#282A35';
-                document.body.style.color = '#FFFFFF';
-                btnVision.innerText = "Cambiar a versión normal";
-            } else {
-                document.body.style.backgroundColor = '#FFFFFF';
-                document.body.style.color = '#000000';
-                btnVision.innerText = "Cambiar a versión nocturna";
-            }
-        });
-        var txtParrafoHidden = document.getElementById("ojoComn");
-        var txtShowCommand = document.getElementById("showCommand");
-        var txtOjo = document.getElementById("ojoComn");
-        var ulHidden = document.getElementById("contH");
-        var dataSinBd = [
+        if (txtBtnVision == "Cambiar a versión nocturna") {
+          document.body.style.backgroundColor = "#282A35";
+          document.body.style.color = "#FFFFFF";
+          btnVision.innerText = "Cambiar a versión normal";
+        } else {
+          document.body.style.backgroundColor = "#FFFFFF";
+          document.body.style.color = "#000000";
+          btnVision.innerText = "Cambiar a versión nocturna";
+        }
+      });
+      var txtParrafoHidden = document.getElementById("ojoComn");
+      var txtShowCommand = document.getElementById("showCommand");
+      var txtOjo = document.getElementById("ojoComn");
+      var ulHidden = document.getElementById("contH");
+      var dataSinBd = [
+        {
+          hiddenContent: [
             {
-                "hiddenContent" : [
-                    {
-                        "comandosMagicos": [
-                            {//Si llegaste hasta aquí y no cumples con los requisitos mencionados en la web, VETE DE AQUÍ XD.
-                                "descripcion" : "<span>Ver un git log en interfaz sin descargar un programa extra</b>: Git permite ver de forma gráfica en una interfaz los commits que has hecho, el historial de ramas e incluso los tags. Usa el comando <b>gitk</b> y verás algo parecido a esto.</span>",
-                                "img" : [
-                                    {"src":"img/revisemos-faz.png", "alt": "revisa el comando gitk"}
-                                ]
-                            }//Si llegaste hasta aquí y no cumples con los requisitos mencionados en la web, VETE DE AQUÍ XD.
-                        ]
-                    }
-                ]
-            }
-        ]
-
-        txtShowCommand.addEventListener("click", function (e) {
-            if (confirm("Es en serio, solo continúa si estas preparado")) {
-                   //estas dos lineas para ocultar los dos ultimos parrafos
-                        txtParrafoHidden.hidden = true;
-                        txtShowCommand.hidden = true;
-                if (ulHidden.children.length > 0) {
-                    return false;
-                }
-                else
+              comandosMagicos: [
                 {
-                    var newLi = document.createElement("li");
-                    var newImg = document.createElement("img");
-                    var htmlBr = document.createElement("br");
-                    var descripcion = dataSinBd[0].hiddenContent[0].comandosMagicos[0].descripcion;
-                    var srcImg = dataSinBd[0].hiddenContent[0].comandosMagicos[0].img[0].src;
-                    var altImg = dataSinBd[0].hiddenContent[0].comandosMagicos[0].img[0].alt;
-                    
-                    
-                    //asignaciones
-                    ulHidden.append(newLi);
-                    if (methodValidator(newLi.insertAdjacentHTML)) 
+                  //Si llegaste hasta aquí y no cumples con los requisitos mencionados en la web, VETE DE AQUÍ XD.
+                  descripcion:
+                    "<span>Ver un git log en interfaz sin descargar un programa extra</b>: Git permite ver de forma gráfica en una interfaz los commits que has hecho, el historial de ramas e incluso los tags. Usa el comando <b>gitk</b> y verás algo parecido a esto.</span>",
+                  img: [
                     {
-                        newLi.insertAdjacentHTML("afterbegin", descripcion);
-                    }
-                    else 
-                    {
-                        insertElementInNode(newLi, descripcion);
-                    }
-                    setAttributes(newImg, {"src": srcImg, "alt": altImg, "width": "1000"});
-                    newLi.appendChild(htmlBr);
-                    newLi.appendChild(newImg);
-                }
-            }
-        });
+                      src: "img/revisemos-faz.png",
+                      alt: "revisa el comando gitk",
+                    },
+                  ],
+                }, //Si llegaste hasta aquí y no cumples con los requisitos mencionados en la web, VETE DE AQUÍ XD.
+              ],
+            },
+          ],
+        },
+      ];
 
-        /*funciones*/
-        function methodValidator (element) 
-        {
-            var response = false;
-            if (element) {
-                response = true;
+      txtShowCommand.addEventListener("click", function (e) {
+        if (confirm("Es en serio, solo continúa si estas preparado")) {
+          //estas dos lineas para ocultar los dos ultimos parrafos
+          txtParrafoHidden.hidden = true;
+          txtShowCommand.hidden = true;
+          if (ulHidden.children.length > 0) {
+            return false;
+          } else {
+            var newLi = document.createElement("li");
+            var newImg = document.createElement("img");
+            var htmlBr = document.createElement("br");
+            var descripcion =
+              dataSinBd[0].hiddenContent[0].comandosMagicos[0].descripcion;
+            var srcImg =
+              dataSinBd[0].hiddenContent[0].comandosMagicos[0].img[0].src;
+            var altImg =
+              dataSinBd[0].hiddenContent[0].comandosMagicos[0].img[0].alt;
+
+            //asignaciones
+            ulHidden.append(newLi);
+            if (methodValidator(newLi.insertAdjacentHTML)) {
+              newLi.insertAdjacentHTML("afterbegin", descripcion);
+            } else {
+              insertElementInNode(newLi, descripcion);
             }
-            return response;
+            setAttributes(newImg, { src: srcImg, alt: altImg, width: "1000" });
+            newLi.appendChild(htmlBr);
+            newLi.appendChild(newImg);
+          }
         }
-        function insertElementInNode (element, stringContent)
-        {
-            var range = document.createRange();
-            var frag = range.createContextualFragment(stringContent);
-            element.appendChild(frag, element);
+      });
+
+      /*funciones*/
+      function methodValidator(element) {
+        var response = false;
+        if (element) {
+          response = true;
         }
-        function setAttributes (element, attrs)
-        {
-            for (var key in attrs) {
-                element.setAttribute(key, attrs[key]);
-            }
+        return response;
+      }
+      function insertElementInNode(element, stringContent) {
+        var range = document.createRange();
+        var frag = range.createContextualFragment(stringContent);
+        element.appendChild(frag, element);
+      }
+      function setAttributes(element, attrs) {
+        for (var key in attrs) {
+          element.setAttribute(key, attrs[key]);
         }
+      }
     </script>
-</body>
+  </body>
 </html>
