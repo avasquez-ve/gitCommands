@@ -21,6 +21,9 @@ header img {
 body {
     font-family: Arial;
 }
+h1{
+    color: blue;
+}
 .center {
     margin: 0 auto;
 }
