@@ -6,9 +6,12 @@ header {
     height: 100px;
     width: 100%;
     font-size: 70px;
+    opacity: 0.7;
 }
 header span {
     padding-left: 10px;
+    position: relative;
+    top: 5px;
 }
 header img {
 
@@ -33,10 +36,13 @@ body {
     width: 150px;
     border-radius: 5px;
     height: 30px;
-    background-color: #6e6e6e;
+    background-color: #bfbfbf;
     align-items: center;
     text-align: center;
+    margin-right: 10px;
+
 }
 #showCommand {
     cursor: pointer;
 }
+

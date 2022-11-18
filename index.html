@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <header>
-    <img src="./img/logo_de_git.png" alt="Logo de git">
+    <img src="./img/github_logo.png" alt="Logo de git">
     <span>Comandos de GitHub</span>
 </header>
 <body>
@@ -78,7 +78,11 @@
             <br><br>
             Si eliges <b>Accept Current Change</b> estarás dejando los cambios de la rama actual, en cambio, si elgies <b>Accept Incoming Change</b> estarás obteniendo los cambios de la rama desde la cual estás obteniendo los cambios.
             </li>
-            <li><b>Publicar ramas en repositorio remotos:</b> Si deseas que tu rama pueda ser usada/visualizada  por otros desarrolladores en un repositorio remoto, debes usar el comando <b>git push origin nombreRama</b></li>
+            <li><b>Publicar ramas en repositorio remotos:</b> Si deseas que tu rama pueda ser usada/visualizada  por otros desarrolladores en un repositorio remoto, debes usar el comando <b>git push origin nombreRama</b></li><br>
+            <li><b>Otros errroes</b> </li>
+            <p>Justo como se menciona arriba, una vez resuelves el conflicto puedes hacer el merge, pero suele pasar sobretodo a los que estamos empezando que se olvida añadir los archivos y hacerles commit por lo que Git nos arrojará este error: </p>
+            <img src="./img/errores2.png" alt="Error en el merge">
+            <p>Lo que sucede es que Git te dice que tienes que hacer commits antes de volver a realizar un merge (es decir asume que probablemente arreglaste los conflictos, sin embargo también te dice que puede seguir existiendo el conflicto, osea te da todas las opciones posibles), justo después de esto simplemente debes hacer commits a tus nuevos cambios que son la resolución de los conflictos, enviar, el problema debe estar resuelto y podrás hacer merge sin problema. Un error sencillo pero para los que recién empiezan pueden estar varios minutos tratando de resolverlo.</p>
         </ul>
     </ul>
     <br>
@@ -191,8 +195,8 @@
     <p>Amend remienda nuestro error y los cambios que hicimos nos los permite agregar al commit más reciente.</p>
     <ul>
         <li>Para esto, se debe hacer los cambios necesario, <b>hacer un git add</b> y posterior a esto, ejecutar el comando <b>git commit --amend</b></li>
+    </ul>     
     </ul>
-
     <h1>Magia para desarolladores</h1>
     <p>Si has llegado hasta aquí y ya manejas de memoria los principales comandos de git, los comandos para las ramas,sabes hacer un merge sin caer en la locura y trabajar con repositorios remotos.</p>
     <p>Te dejo un buen comando de git que te ayudará a ver fácilmente tu historial de commits.</p>
