@@ -10,42 +10,43 @@
     <img src="./img/github_logo.png" alt="Logo de git">
     <span>Comandos de GitHub</span>
 </header>
-<body>
-    <h6 class="fixed" id="changeWeb"><span>Cambiar a versión nocturna</span></h6>
-    <h1>Comandos más usados:</h1>
+    
+<body> 
+    <h6 class="fixed " id="changeWeb"><span>Cambiar a versión nocturna</span></h6>
+    <h1 id="comandosMasUsados", style="display: flex;">Comandos más usados👇</h1>
     <ul>
-        <li><b>git init:</b> se usa para iniciar un nuevo repositorio de Git</li>
-        <li><b>git config -l:</b> Ver configuración actual</li>
-        <li><b>git config --global user.name "Nombre":</b> Configura nombre usuario</li>
-        <li><b>git config --global user.email "email":</b> Configura email usuario</li>
-        <li><b>git status: </b>Muestra el estado de actual de los archivos ubicados en el área de staging</li>
-        <li><b>git add nombreArhivo.extension: </b>Agrega al área de staging el o los archivos.</li>
-        <li><b>git commit -m "Descripcion commit": </b>Agrega los cambios a la BD del repositorio de git</li>
-        <li><b>git commit -am "Descripción commit": </b>Nos ahorra el tener que utilizar <b>git commit .</b>, este comando solo es válido para archivos que ya existen en el repositorio, no afectará a archivos nuevos que no hayan sido agregados con add</li>
-        <li><b>git commit:</b> Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio agregar un comentario para el commit. Para poder editar el comit usar "ESC  i". Para guardar cambios ESC + SHIFT + Z Z</li>
-        <li><b>git log: </b>Muestra el historial detallado con commit e id, de todos los commits en dicho repositorio</li>
-        <li><b>Git log repotenciado:</b> Para tener una visualización más gráfica de tu historial en un repositorio, puedes usar el comando <b>git log --all -decorate- oneline</b> con esto, podrás ver el historial de cambios y ramas de forma más gráfica. <br><img src="img/git_log_all_graph_decorate.png" alt="ver log de commits y ramas historicas en un repositorio"><br></li>
-        <li><b>git log para buscar</b> si deseas buscar palabras que hayas dejado en tus commits, puedes usar <b>git log -S palabra</b>, esto te retornará todos los commits que incluyan la palabra a buscar.</li>
-        <li><b>git diff: </b>Permite ver las diferencias entre el staging y nuestro archivo en local. tiene las variaciones <b>git diff id1 id2</b> donde se comparan dos versiones según los id del commit seleccionado. y <b>git diff --stat</b> donde ves las diferencias más resumidas.</li>
-        <li><b>git show: </b>Se utiliza para ver el commit y la rama en el que te encuentras actualmente.</li>
+        <li id="li1"><b>git init:</b> se usa para iniciar un nuevo repositorio de Git</li>
+        <li id="li2"><b>git config -l:</b> Ver configuración actual</li>
+        <li id="li3"><b>git config --global user.name "Nombre":</b> Configura nombre usuario</li>
+        <li id="li4"><b>git config --global user.email "email":</b> Configura email usuario</li>
+        <li id="li5"><b>git status: </b>Muestra el estado de actual de los archivos ubicados en el área de staging</li>
+        <li id="li6"><b>git add nombreArhivo.extension: </b>Agrega al área de staging el o los archivos.</li>
+        <li id="li7"><b>git commit -m "Descripcion commit": </b>Agrega los cambios a la BD del repositorio de git</li>
+        <li id="li8"><b>git commit -am "Descripción commit": </b>Nos ahorra el tener que utilizar <b>git commit .</b>, este comando solo es válido para archivos que ya existen en el repositorio, no afectará a archivos nuevos que no hayan sido agregados con add</li>
+        <li id="li9"><b>git commit:</b> Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio agregar un comentario para el commit. Para poder editar el comit usar "ESC  i". Para guardar cambios ESC + SHIFT + Z Z</li>
+        <li id="li10"><b>git log: </b>Muestra el historial detallado con commit e id, de todos los commits en dicho repositorio</li>
+        <li id="li11"><b>Git log repotenciado:</b> Para tener una visualización más gráfica de tu historial en un repositorio, puedes usar el comando <b>git log --all -decorate- oneline</b> con esto, podrás ver el historial de cambios y ramas de forma más gráfica. <br><img src="img/git_log_all_graph_decorate.png" alt="ver log de commits y ramas historicas en un repositorio"><br></li>
+        <li id="li12"><b>git log para buscar</b> si deseas buscar palabras que hayas dejado en tus commits, puedes usar <b>git log -S palabra</b>, esto te retornará todos los commits que incluyan la palabra a buscar.</li>
+        <li id="li13"><b>git diff: </b>Permite ver las diferencias entre el staging y nuestro archivo en local. tiene las variaciones <b>git diff id1 id2</b> donde se comparan dos versiones según los id del commit seleccionado. y <b>git diff --stat</b> donde ves las diferencias más resumidas.</li>
+        <li id="li14"><b>git show: </b>Se utiliza para ver el commit y la rama en el que te encuentras actualmente.</li>
         <br>
-        <li><b>git grep:</b> se usa para buscar texto en nuestros archivos del repositorio, puedes ver la cantidad de veces que se usa una palabra, incluso incluir expresiones regulares. Un ejemplo sería usar <b>git gre -n palabra</b> para ver en que archivos y que líneas esta la palabra "palabra" o <b>git grep -c palabra</b> para ver la cantidad de veces que se repite la palabra "palabra"</li>
+        <li id="li15"><b>git grep:</b> se usa para buscar texto en nuestros archivos del repositorio, puedes ver la cantidad de veces que se usa una palabra, incluso incluir expresiones regulares. Un ejemplo sería usar <b>git gre -n palabra</b> para ver en que archivos y que líneas esta la palabra "palabra" o <b>git grep -c palabra</b> para ver la cantidad de veces que se repite la palabra "palabra"</li>
     </ul>
 
-    <h1>Comando de consola útiles</h1>
-    <p>Esta sección es un extra, no tiene que ver directamente con Git, pero puede apoyar de una u otra manera tu repositorios.</p>
+    <h1 id="comandoConUtiles">Comando de consola útiles</h1>
+    <p id="li16">Esta sección es un extra, no tiene que ver directamente con Git, pero puede apoyar de una u otra manera tu repositorios.</p>
     <ul>
-        <li><b>Crear un alias:</b> para resumir comandos que sean muy extensos, se puede utilizar el comando <b>alias nombreNuevoComando="Comando a convertir"</b> de esta manera, podemos usar una palabra más fácil de recordar para nosotros. <br><b>Ejemplo:</b> alias arbolito="git log --all --graph --decorate --oneline"</li>
+        <li id="li17"><b>Crear un alias:</b> para resumir comandos que sean muy extensos, se puede utilizar el comando <b>alias nombreNuevoComando="Comando a convertir"</b> de esta manera, podemos usar una palabra más fácil de recordar para nosotros. <br><b>Ejemplo:</b> alias arbolito="git log --all --graph --decorate --oneline"</li>
     </ul>
 
-    <h1>Comandos importantes:</h1>
+    <h1 id="comandosImportantes">Comandos importantes:</h1>
     <p>Estos comandos se separan ya que tienen funciones muy importantes.</p>
     <ul>
-        <li><b>git reset idCommit --hard/soft</b> Este comando se encarga de regresar a una versión especificada. Se debe tener cuidado con este comando, ya que borrará absolutamente todos los cambios realizados despues de dicho commit. existen dos variastes para el mismo. <b>--hard</b> hará que regrese por completo todo a la versión elegida, perdiendo incluso, los cambios en staging. <b>--soft</b> cumple el mismo rol, pero mantiene los cambios en staging para su posterior commit. </li>
-        <li><b>git reset HEAD (Me encanta XD): </b>Regresa todos los cambios en staging como unstaged. Es decir, revierte el git add.</li>
-        <li><b>git checkout idCommit archivo.extension:</b> Obtiene la versión especificada de dicho archivo. PERO, no elimina sus versiones posteriores. La versión obtenida se tomará como untracked y podrá ser agregada al staging para realizar commit y crear una nueva versión.</li>
-        <li><b>git rm --cached:</b> Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.</li>
-        <li><b>git rm --force:</b> Elimina los archivos del área de Staging y de nuestro disco duro.</li>
+        <li id="li18"><b>git reset idCommit --hard/soft</b> Este comando se encarga de regresar a una versión especificada. Se debe tener cuidado con este comando, ya que borrará absolutamente todos los cambios realizados despues de dicho commit. existen dos variastes para el mismo. <b>--hard</b> hará que regrese por completo todo a la versión elegida, perdiendo incluso, los cambios en staging. <b>--soft</b> cumple el mismo rol, pero mantiene los cambios en staging para su posterior commit. </li>
+        <li id="li19"><b>git reset HEAD (Me encanta XD): </b>Regresa todos los cambios en staging como unstaged. Es decir, revierte el git add.</li>
+        <li id="li20"><b>git checkout idCommit archivo.extension:</b> Obtiene la versión especificada de dicho archivo. PERO, no elimina sus versiones posteriores. La versión obtenida se tomará como untracked y podrá ser agregada al staging para realizar commit y crear una nueva versión.</li>
+        <li id="li21"><b>git rm --cached:</b> Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.</li>
+        <li id="li22"><b>git rm --force:</b> Elimina los archivos del área de Staging y de nuestro disco duro.</li>
         <ul>Para visualizar todo el historial de git, aunque lo hayamos eliminado, usamos el comando <b>git reflog</b> con este, podemos ver las referencias de los commit e ir y venir entre las distintas versiones con git RESET</ul>
         <ul><b>Recordatorio:</b> ¡GIT RESET es una mala práctica! Solo usarlo en casos de extrema emergencia y como última opción.</ul>
     </ul>
@@ -245,7 +246,7 @@
                     {
                         "comandosMagicos": [
                             {//Si llegaste hasta aquí y no cumples con los requisitos mencionados en la web, VETE DE AQUÍ XD.
-                                "descripcion" : "<span>Ver un git log en interfaz sin descargar un programa extra</b>: Git permite ver de forma gráfica en una interfaz los commits que has hecho, el historial de ramas e incluso los tags. Usa el comando <b>gitk</b> y verás algo parecido a esto.</span>",
+                                "descripcion" : "<span>Ver un git log en interfaz sin descargar un programa etra</b>: Git permite ver de forma gráfica en una interfaz los ommits que has hecho, el historial de ramas e incluso los tags. Usa el comando <b>gitk</b> y verás algo parecido a esto.</span>",
                                 "img" : [
                                     {"src":"img/revisemos-faz.png", "alt": "revisa el comando gitk"}
                                 ]

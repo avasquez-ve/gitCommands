@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+
 header {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Concert One', cursive;
     background-color: #333333;
     border-radius: 5px;
     color: white;
@@ -7,6 +10,97 @@ header {
     width: 100%;
     font-size: 70px;
     opacity: 0.7;
+}
+
+#comandosMasUsados{
+    font-family: 'Concert One', cursive;
+    padding: 5px;
+    background-color: #0f4066fa;
+    width: 372px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    color: #d1e4e6;
+
+}
+
+#li1{
+    font-family: 'Tilt Neon', cursive;
+
+}
+#li2{
+    font-family: 'Tilt Neon', cursive;
+}
+#li3{
+    font-family: 'Tilt Neon', cursive;
+}
+#li4{
+    font-family: 'Tilt Neon', cursive;
+}
+#li5{
+    font-family: 'Tilt Neon', cursive;
+}
+#li6{
+    font-family: 'Tilt Neon', cursive;
+}
+#li7{
+    font-family: 'Tilt Neon', cursive;
+}  
+#li8{
+    font-family: 'Tilt Neon', cursive;
+}
+#li9{
+    font-family: 'Tilt Neon', cursive;
+}
+#li10{
+    font-family: 'Tilt Neon', cursive;
+}
+#li11{
+    font-family: 'Tilt Neon', cursive;
+}
+#li12{
+    font-family: 'Tilt Neon', cursive;
+}
+#li13{
+    font-family: 'Tilt Neon', cursive;
+}
+#li14{
+    font-family: 'Tilt Neon', cursive;
+}
+#li15{
+    font-family: 'Tilt Neon', cursive;
+}
+#comandoConUtiles{
+    font-family: 'Concert One', cursive;
+    color: #d1e4e6;
+}
+#li16{
+    font-family: 'Tilt Neon', cursive;
+}
+#li17{
+    font-family: 'Tilt Neon', cursive;
+}
+#comandosImportantes{
+    font-family: 'Concert One', cursive;
+    color: #d1e4e6;
+}
+#li18{
+    font-family: 'Tilt Neon', cursive;
+}
+#li19{
+    font-family: 'Tilt Neon', cursive;
+}
+#li20{
+    font-family: 'Tilt Neon', cursive;
+}
+#li21{
+    font-family: 'Tilt Neon', cursive;
+}
+#li22{
+    font-family: 'Tilt Neon', cursive; 
 }
 header span {
     padding-left: 10px;
@@ -20,6 +114,8 @@ header img {
 }
 body {
     font-family: Arial;
+    background-color:#a0abc9;
+    color: #1A120B;
 }
 .center {
     margin: 0 auto;
@@ -40,6 +136,7 @@ body {
     align-items: center;
     text-align: center;
     margin-right: 10px;
+    margin-top: auto;
 
 }
 #showCommand {
