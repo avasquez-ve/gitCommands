@@ -128,6 +128,7 @@
         <li><b>Segundo paso:</b> para terminar de configurar las claves, debemos comprobar que el servidor se encuentre activo, para esto usar el comando <br> <b>eval $(ssh-agent -s)</b> <br> lo cual nos debería retornar un mensaje <b>Agent pid numeroAleatorio</b></li><br>
         <li><b>Tercer y último paso:</b> ahora, solo debemos agregar al servidor nuestra llave privada, para esto, usar el comando <br> <b>ssh-add ruta-donde-guardaste-tu-llave-privada</b> <br> Y listo, ya tendremos configurada nuestra llave privada para poder conectarnos a través de SSH con GitHub</li><br>
     </ol>
+    <p>La documentación oficial de GitHub para configurar las llaves SSH para Windows, Linux y Mac, se encuentra en:</p> <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a>
 
     <h1>Conectarnos a Github a través de SSH</h1>
     <p>Luego de haber creado y configurado nuestra llave privada. Debemos configurar nuestra llave pública (la única que podemos compartir) con Github. Es importante tener en cuenta que debemos realizar los pasos anteriores, de lo contrario, no podremos continuar con este paso.</p>
