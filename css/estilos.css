@@ -24,6 +24,11 @@ body {
 .center {
     margin: 0 auto;
 }
+
+#h1 {
+    color: grey;
+    background-color: beige;
+}
 .fixed {
     position: fixed;
     top: 0;
