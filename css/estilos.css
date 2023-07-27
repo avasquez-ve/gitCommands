@@ -1,17 +1,23 @@
+/* Style the header with a grey background and some padding */
 header {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #333333;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
     border-radius: 5px;
-    color: white;
-    height: 100px;
-    width: 100%;
-    font-size: 70px;
-    opacity: 0.7;
+    height: 80px;
+    width: 98%;
+    display: block;
 }
+
+
 header span {
     padding-left: 10px;
-    position: relative;
-    top: 5px;
+    top: 3px;
+    font-size: 30px;
+    font-weight:bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    display: inline-flex;    
 }
 header img {
 
@@ -19,10 +25,30 @@ header img {
     vertical-align: middle;
 }
 body {
-    font-family: Arial;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .center {
     margin: 0 auto;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-left: 3%;
+    color: rgb(231, 53, 53);
+    font-size: x-large;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+ul {
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height : 25px;
+    font-size: small;
+}
+
+p {
+    margin-left: 3%;
+    margin-right: 3%;
 }
 .fixed {
     position: fixed;
@@ -30,18 +56,28 @@ body {
     right: 0;
     cursor: pointer;
     z-index: 9999;
-    display: flex;
-    padding: 3px;
-    text-align: center;
-    width: 150px;
-    border-radius: 5px;
-    height: 30px;
-    background-color: #bfbfbf;
-    align-items: center;
-    text-align: center;
+    display: inline-table;
     margin-right: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 50px;
+    border-radius: 20px;
+    height: auto;
+    background-color: rgb(231, 53, 53);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-weight:100;
+    font-size: 10px;
+    text-transform: uppercase;
 
 }
+
+.changeWeb {
+    size-adjust: auto;
+}
+
+
 #showCommand {
     cursor: pointer;
 }
